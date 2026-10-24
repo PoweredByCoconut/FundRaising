@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bckhwgj31dkcj"]
+
+[ext_resource type="Script" uid="uid://dvy33f7eppelb" path="res://Scripts/FightGuys/FightGuysCharCont.gd" id="1_n1bhq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgfkp"]
+radius = 24.0
+height = 48.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_xsafn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgfkp"]
+size = Vector2(2415, 43)
+
+[sub_resource type="Gradient" id="Gradient_htruo"]
+colors = PackedColorArray(0, 0.30980393, 0.49411765, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vpp55"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mfu4w"]
+width = 4
+height = 2
+noise = SubResource("FastNoiseLite_vpp55")
+color_ramp = SubResource("Gradient_htruo")
+as_normal_map = true
+
+[node name="Node2D" type="Node2D" unique_id=607458174]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1183180771]
+position = Vector2(0, 69)
+script = ExtResource("1_n1bhq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1623356871]
+position = Vector2(-1.9073486e-06, 0)
+shape = SubResource("CapsuleShape2D_pgfkp")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1209603354]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(46, 46)
+texture = SubResource("AnimatedTexture_xsafn")
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=427463274]
+
+[node name="HealthLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1173546928]
+offset_left = -545.0
+offset_top = -290.0
+offset_right = -408.0
+offset_bottom = -261.0
+text = "HEALTH:"
+
+[node name="ControlsLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1921322170]
+offset_left = -560.0
+offset_top = 163.0
+offset_right = -121.0
+offset_bottom = 308.0
+text = "Controls:
+X to attack (Attacks do more damage the less defense you have)
+Z to heal (Damage is related to health)
+C to defend (Defense is a hidden readiness associated with health)"
+
+[node name="AttackLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1462372055]
+offset_left = -396.0
+offset_top = -289.0
+offset_right = -271.0
+offset_bottom = -256.0
+text = "ATTACK POWER:"
+
+[node name="DefenseLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1631762157]
+offset_left = -196.0
+offset_top = -288.0
+offset_right = -123.0
+offset_bottom = -265.0
+text = "DEFENSE:"
+
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=1136283972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2105703388]
+position = Vector2(4.5, 118.5)
+shape = SubResource("RectangleShape2D_pgfkp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=169758917]
+position = Vector2(3.9999695, 118.00003)
+scale = Vector2(604, -21)
+texture = SubResource("NoiseTexture2D_mfu4w")
