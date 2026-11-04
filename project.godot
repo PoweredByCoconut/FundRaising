@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FundRaising"
-run/main_scene="uid://bffgy8dg8e1uc"
+run/main_scene="uid://dbvj2u2jlpprx"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -30,6 +30,7 @@ project/assembly_name="FundRaising"
 
 acorn=""
 player=""
+rock=""
 
 [physics]
 
