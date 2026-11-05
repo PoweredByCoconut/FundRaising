@@ -1,3 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+.godotmaker/state.json
+.godotmaker/metrics.jsonl
+.godotmaker/metrics_current.jsonl
+.godotmaker/traces/
+.godotmaker/applied_migrations.json
+.godotmaker/logs/
+.godotmaker/pi-runtime.json
+.godotmaker/pi-runtime.log
+.godotmaker/pi-worktrees/
+reports/
+__pycache__/
+*.pyc

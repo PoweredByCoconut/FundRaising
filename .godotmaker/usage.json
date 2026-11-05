@@ -1,0 +1,59 @@
+{
+  "lifetime": {
+    "perModel": {},
+    "totalInputTokens": 0,
+    "totalOutputTokens": 0,
+    "totalCacheCreationTokens": 0,
+    "totalCacheReadTokens": 0,
+    "totalCostUsd": null,
+    "durationMs": 2476.7646999999997,
+    "runCount": 1
+  },
+  "recentRuns": [
+    {
+      "startedAt": "2026-11-05T01:39:45.397Z",
+      "endedAt": "2026-11-05T01:39:47.960Z",
+      "durationMs": 2476.7646999999997,
+      "totals": {
+        "perModel": {},
+        "totalInputTokens": 0,
+        "totalOutputTokens": 0,
+        "totalCacheCreationTokens": 0,
+        "totalCacheReadTokens": 0,
+        "totalCostUsd": null
+      },
+      "finalState": "gdd",
+      "agent": "opencode",
+      "states": {
+        "scaffold": {
+          "durationMs": 11.156999999991967,
+          "totals": {
+            "perModel": {},
+            "totalInputTokens": 0,
+            "totalOutputTokens": 0,
+            "totalCacheCreationTokens": 0,
+            "totalCacheReadTokens": 0,
+            "totalCostUsd": null
+          },
+          "subagentCount": 0,
+          "compactionCount": 0
+        },
+        "gdd": {
+          "durationMs": 2465.6077000000078,
+          "totals": {
+            "perModel": {},
+            "totalInputTokens": 0,
+            "totalOutputTokens": 0,
+            "totalCacheCreationTokens": 0,
+            "totalCacheReadTokens": 0,
+            "totalCostUsd": null
+          },
+          "subagentCount": 0,
+          "compactionCount": 0
+        }
+      },
+      "subagentCount": 0,
+      "compactionCount": 0
+    }
+  ]
+}
