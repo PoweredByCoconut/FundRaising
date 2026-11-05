@@ -4,6 +4,10 @@ using System;
 namespace CharacterNS{
   public class Character
   {
+    private const int MAXHEALTH = 30;
+    private const int MAXATK = 10;
+    private const int MAXHEAL = 5;
+    private const int MAXDEF = 7;
     private int health;
     private int atkPwr;
     private int defense;
@@ -75,10 +79,10 @@ namespace CharacterNS{
       return true;
     }
 
-    public int getHealth() => health;
-    public int getAtkPwr() => atkPwr;
-    public int getDefense() => defense;
-    public Boolean getIsAlive() => isAlive;
+    public int getHealth() => this.health;
+    public int getAtkPwr() => this.atkPwr;
+    public int getDefense() => this.defense;
+    public Boolean getIsAlive() => this.isAlive;
   }
 
 }

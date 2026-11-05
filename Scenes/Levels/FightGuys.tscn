@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://bckhwgj31dkcj"]
 
 [ext_resource type="Script" uid="uid://br8gulvvqoyfe" path="res://Scripts/FightGuys/FightGuys.cs" id="1_n1bhq"]
-[ext_resource type="Script" uid="uid://dp04x6gtycr61" path="res://Scripts/FightGuys/TestCharacterClass.cs" id="2_mfu4w"]
+[ext_resource type="Script" uid="uid://1203e81y4acm" path="res://Scripts/FightGuys/PlayerCharacter.cs" id="2_vpp55"]
+[ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgfkp"]
 radius = 24.0
 height = 48.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_xsafn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knlnu"]
+bg_color = Color(0.20871013, 0.20871016, 0.20871004, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq1h3"]
+bg_color = Color(0.44264498, 0.021757228, 0.01486617, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgfkp"]
 size = Vector2(2415, 43)
@@ -24,33 +31,80 @@ noise = SubResource("FastNoiseLite_vpp55")
 color_ramp = SubResource("Gradient_htruo")
 as_normal_map = true
 
-[node name="Node2D" type="Node2D" unique_id=607458174]
+[node name="FightGuys" type="Node2D" unique_id=607458174]
 script = ExtResource("1_n1bhq")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1183180771]
-position = Vector2(0, 69)
+[node name="PlayerCharacter" type="CharacterBody2D" parent="." unique_id=1183180771]
+position = Vector2(-258, 71)
+script = ExtResource("2_vpp55")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1623356871]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter" unique_id=1623356871]
 position = Vector2(-1.9073486e-06, 0)
 shape = SubResource("CapsuleShape2D_pgfkp")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1209603354]
+[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter" unique_id=1209603354]
 position = Vector2(0, -4.7683716e-07)
 scale = Vector2(46, 46)
 texture = SubResource("AnimatedTexture_xsafn")
 region_enabled = true
 region_rect = Rect2(0, 0, 1, 1)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=427463274]
+[node name="HealthBar" type="ProgressBar" parent="PlayerCharacter" unique_id=627693175]
+offset_left = -93.0
+offset_top = -138.0
+offset_right = 87.0
+offset_bottom = -111.0
+theme_override_styles/background = SubResource("StyleBoxFlat_knlnu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rq1h3")
+max_value = 30.0
+step = 1.0
+value = 10.0
+show_percentage = false
 
-[node name="HealthLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1173546928]
-offset_left = -545.0
-offset_top = -290.0
-offset_right = -408.0
-offset_bottom = -261.0
-text = "HEALTH:"
+[node name="EnemyCharacter" type="CharacterBody2D" parent="." unique_id=1458394751]
+position = Vector2(148, 70)
+script = ExtResource("3_vpp55")
 
-[node name="ControlsLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1921322170]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyCharacter" unique_id=1808305018]
+position = Vector2(-1.9073486e-06, 0)
+shape = SubResource("CapsuleShape2D_pgfkp")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyCharacter" unique_id=2109238798]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(46, 46)
+texture = SubResource("AnimatedTexture_xsafn")
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 1)
+
+[node name="HealthBar" type="ProgressBar" parent="EnemyCharacter" unique_id=548094483]
+offset_left = -96.0
+offset_top = -139.0
+offset_right = 84.0
+offset_bottom = -112.0
+theme_override_styles/background = SubResource("StyleBoxFlat_knlnu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rq1h3")
+max_value = 30.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="GameController" type="Node2D" parent="." unique_id=559764104]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1136283972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=2105703388]
+position = Vector2(4.5, 118.5)
+shape = SubResource("RectangleShape2D_pgfkp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=169758917]
+position = Vector2(0, 277.99997)
+scale = Vector2(604, -185.5)
+texture = SubResource("NoiseTexture2D_mfu4w")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=427463274]
+position = Vector2(5, -1)
+
+[node name="ControlsLabel" type="Label" parent="Camera2D" unique_id=1921322170]
 offset_left = -560.0
 offset_top = 163.0
 offset_right = -121.0
@@ -59,31 +113,4 @@ text = "Controls:
 X to attack (Attacks do more damage the less defense you have)
 Z to heal (Damage is related to health)
 C to defend (Defense is a hidden readiness associated with health)"
-
-[node name="AttackLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1462372055]
-offset_left = -396.0
-offset_top = -289.0
-offset_right = -271.0
-offset_bottom = -256.0
-text = "ATTACK POWER:"
-
-[node name="DefenseLabel" type="Label" parent="CharacterBody2D/Camera2D" unique_id=1631762157]
-offset_left = -196.0
-offset_top = -288.0
-offset_right = -123.0
-offset_bottom = -265.0
-text = "DEFENSE:"
-
-[node name="Area2D" type="StaticBody2D" parent="." unique_id=1136283972]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2105703388]
-position = Vector2(4.5, 118.5)
-shape = SubResource("RectangleShape2D_pgfkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=169758917]
-position = Vector2(3.9999695, 118.00003)
-scale = Vector2(604, -21)
-texture = SubResource("NoiseTexture2D_mfu4w")
-
-[node name="TestCharacterClass" type="Node" parent="." unique_id=38139043]
-script = ExtResource("2_mfu4w")
+metadata/_edit_use_anchors_ = true
