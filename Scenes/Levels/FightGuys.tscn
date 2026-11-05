@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bckhwgj31dkcj"]
 
 [ext_resource type="Script" uid="uid://br8gulvvqoyfe" path="res://Scripts/FightGuys/FightGuys.cs" id="1_n1bhq"]
-[ext_resource type="Script" path="res://Scenes/Levels/GameController.cs" id="2_htruo"]
+[ext_resource type="Script" uid="uid://bmxhssurb5kun" path="res://Scripts/FightGuys/GameController.cs" id="2_htruo"]
 [ext_resource type="Script" uid="uid://1203e81y4acm" path="res://Scripts/FightGuys/PlayerCharacter.cs" id="2_vpp55"]
 [ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
 

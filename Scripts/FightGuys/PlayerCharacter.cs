@@ -5,9 +5,9 @@ using System;
 public partial class PlayerCharacter : CharacterBody2D
 {
   [Signal]
-  public delegate void AttackEnemyEventHandler();
-	private ProgressBar _HealthBar;
-  private Character player;
+  public delegate void PlayerActionEventHandler(char action);
+	public ProgressBar _HealthBar;
+  public Character player;
   public override void _Ready()
   {
 	base._Ready();
@@ -41,24 +41,16 @@ public partial class PlayerCharacter : CharacterBody2D
 
   private void OnXPressed()
   {
-	doAttack();
-	GD.Print("Attacking");
+	EmitSignal(SignalName.PlayerAction, 'A');
   }
 
   private void OnCPressed()
   {
-	this.player.defend();
-	GD.Print("Defending");
+	EmitSignal(SignalName.PlayerAction, 'D');
   }
 
   private void OnZPressed()
   {
-	this.player.heal();
-	GD.Print("Healing");
-  }
-
-  public void doAttack()
-  {
-	EmitSignal(SignalName.AttackEnemy);
+	EmitSignal(SignalName.PlayerAction, 'H');
   }
 }

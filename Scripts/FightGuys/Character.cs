@@ -1,4 +1,5 @@
 using System;
+using Godot;
 // Character class represents a fighter in the game. The point of this class is to
 // Manage the characters so that they all have a fair fight.
 namespace CharacterNS{
@@ -76,6 +77,7 @@ namespace CharacterNS{
         return false;
       }
       this.health = newHealth; // FIX: Update the character's actual health
+      GD.Print("New Health: " + this.health);
       return true;
     }
 
