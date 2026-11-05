@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bckhwgj31dkcj"]
 
 [ext_resource type="Script" uid="uid://br8gulvvqoyfe" path="res://Scripts/FightGuys/FightGuys.cs" id="1_n1bhq"]
+[ext_resource type="Script" path="res://Scenes/Levels/GameController.cs" id="2_htruo"]
 [ext_resource type="Script" uid="uid://1203e81y4acm" path="res://Scripts/FightGuys/PlayerCharacter.cs" id="2_vpp55"]
 [ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
 
@@ -34,49 +35,25 @@ as_normal_map = true
 [node name="FightGuys" type="Node2D" unique_id=607458174]
 script = ExtResource("1_n1bhq")
 
-[node name="PlayerCharacter" type="CharacterBody2D" parent="." unique_id=1183180771]
-position = Vector2(-258, 71)
-script = ExtResource("2_vpp55")
+[node name="GameController" type="Node2D" parent="." unique_id=559764104]
+script = ExtResource("2_htruo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter" unique_id=1623356871]
-position = Vector2(-1.9073486e-06, 0)
-shape = SubResource("CapsuleShape2D_pgfkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter" unique_id=1209603354]
-position = Vector2(0, -4.7683716e-07)
-scale = Vector2(46, 46)
-texture = SubResource("AnimatedTexture_xsafn")
-region_enabled = true
-region_rect = Rect2(0, 0, 1, 1)
-
-[node name="HealthBar" type="ProgressBar" parent="PlayerCharacter" unique_id=627693175]
-offset_left = -93.0
-offset_top = -138.0
-offset_right = 87.0
-offset_bottom = -111.0
-theme_override_styles/background = SubResource("StyleBoxFlat_knlnu")
-theme_override_styles/fill = SubResource("StyleBoxFlat_rq1h3")
-max_value = 30.0
-step = 1.0
-value = 10.0
-show_percentage = false
-
-[node name="EnemyCharacter" type="CharacterBody2D" parent="." unique_id=1458394751]
+[node name="EnemyCharacter" type="CharacterBody2D" parent="GameController" unique_id=1458394751]
 position = Vector2(148, 70)
 script = ExtResource("3_vpp55")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyCharacter" unique_id=1808305018]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameController/EnemyCharacter" unique_id=1808305018]
 position = Vector2(-1.9073486e-06, 0)
 shape = SubResource("CapsuleShape2D_pgfkp")
 
-[node name="Sprite2D" type="Sprite2D" parent="EnemyCharacter" unique_id=2109238798]
+[node name="Sprite2D" type="Sprite2D" parent="GameController/EnemyCharacter" unique_id=2109238798]
 position = Vector2(0, -4.7683716e-07)
 scale = Vector2(46, 46)
 texture = SubResource("AnimatedTexture_xsafn")
 region_enabled = true
 region_rect = Rect2(0, 0, 1, 1)
 
-[node name="HealthBar" type="ProgressBar" parent="EnemyCharacter" unique_id=548094483]
+[node name="HealthBar" type="ProgressBar" parent="GameController/EnemyCharacter" unique_id=548094483]
 offset_left = -96.0
 offset_top = -139.0
 offset_right = 84.0
@@ -88,7 +65,32 @@ step = 1.0
 value = 10.0
 show_percentage = false
 
-[node name="GameController" type="Node2D" parent="." unique_id=559764104]
+[node name="PlayerCharacter" type="CharacterBody2D" parent="GameController" unique_id=1183180771]
+position = Vector2(-258, 71)
+script = ExtResource("2_vpp55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameController/PlayerCharacter" unique_id=1623356871]
+position = Vector2(-1.9073486e-06, 0)
+shape = SubResource("CapsuleShape2D_pgfkp")
+
+[node name="Sprite2D" type="Sprite2D" parent="GameController/PlayerCharacter" unique_id=1209603354]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(46, 46)
+texture = SubResource("AnimatedTexture_xsafn")
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 1)
+
+[node name="HealthBar" type="ProgressBar" parent="GameController/PlayerCharacter" unique_id=627693175]
+offset_left = -93.0
+offset_top = -138.0
+offset_right = 87.0
+offset_bottom = -111.0
+theme_override_styles/background = SubResource("StyleBoxFlat_knlnu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rq1h3")
+max_value = 30.0
+step = 1.0
+value = 10.0
+show_percentage = false
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1136283972]
 
