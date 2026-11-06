@@ -65,6 +65,27 @@ step = 1.0
 value = 10.0
 show_percentage = false
 
+[node name="AtkPwr" type="Label" parent="GameController/EnemyCharacter" unique_id=589969616]
+offset_left = -202.0
+offset_top = -181.0
+offset_right = -95.0
+offset_bottom = -158.0
+text = "Attack Power:"
+
+[node name="Defense" type="Label" parent="GameController/EnemyCharacter" unique_id=1711846992]
+offset_left = -49.0
+offset_top = -178.0
+offset_right = 85.0
+offset_bottom = -155.0
+text = "Defensive Power:"
+
+[node name="LastAction" type="Label" parent="GameController/EnemyCharacter" unique_id=433774969]
+offset_left = -122.0
+offset_top = -266.0
+offset_right = -82.0
+offset_bottom = -243.0
+text = "Defended"
+
 [node name="PlayerCharacter" type="CharacterBody2D" parent="GameController" unique_id=1183180771]
 position = Vector2(-258, 71)
 script = ExtResource("2_vpp55")
@@ -91,6 +112,27 @@ max_value = 30.0
 step = 1.0
 value = 10.0
 show_percentage = false
+
+[node name="AtkPwr" type="Label" parent="GameController/PlayerCharacter" unique_id=2059287125]
+offset_left = -200.0
+offset_top = -176.0
+offset_right = -93.0
+offset_bottom = -153.0
+text = "Attack Power:"
+
+[node name="Defense" type="Label" parent="GameController/PlayerCharacter" unique_id=849574447]
+offset_left = -45.0
+offset_top = -176.0
+offset_right = 89.0
+offset_bottom = -153.0
+text = "Defensive Power:"
+
+[node name="LastAction" type="Label" parent="GameController/PlayerCharacter" unique_id=972590589]
+offset_left = -122.0
+offset_top = -266.0
+offset_right = -82.0
+offset_bottom = -243.0
+text = "Attacked"
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1136283972]
 

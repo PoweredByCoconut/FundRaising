@@ -9,7 +9,7 @@ public partial class GameController : Node2D
 	private int PlayerHealth;
 	private int EnemyHealth;
 
-	private bool PlayersTurn = true;
+	private bool PlayersTurn = false;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -17,8 +17,10 @@ public partial class GameController : Node2D
 		_Player = GetNode<PlayerCharacter>("PlayerCharacter");
 		_Enemy = GetNode<EnemyCharacter>("EnemyCharacter");
 
-		_Enemy.AttackPlayer += OnEnemyAttackPlayer;
+		_Enemy.PlayerAction += OnEnemyAction;
 		_Player.PlayerAction += OnPlayerAction;
+
+		GameTurn('A');
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,10 +33,13 @@ public partial class GameController : Node2D
 		// Point at whoever's turn it is
 		Character currentTurn;
 		Character defender;
-		if (PlayersTurn) {
+		if (PlayersTurn)
+		{
 			currentTurn = _Player.player;
 			defender = _Enemy.player;
-		} else {
+		}
+		else
+		{
 			currentTurn = _Enemy.player;
 			defender = _Player.player;
 		}
@@ -57,21 +62,39 @@ public partial class GameController : Node2D
 			if (defender == _Enemy.player)
 			{
 				GD.Print("Player Wins");
-			} else if (defender == _Player.player)
+			}
+			else if (defender == _Player.player)
 			{
 				GD.Print("Player Loses");
-			} else
+			}
+			else
 			{
 				// should never run if this runs there is a bug
 				GD.Print("What the crap?!");
 			}
 		}
+		_Player._HealthBar.Value = _Player.player.getHealth();
+		_Player._AtkPwr.Text = $"Attack Power: {_Player.player.getAtkPwr()}";
+		_Player._Defense.Text = $"Defensive Power: {_Player.player.getDefense()}";
+		_Enemy._HealthBar.Value = _Enemy.player.getHealth();
+		_Enemy._AtkPwr.Text = $"Attack Power: {_Enemy.player.getAtkPwr()}";
+		_Enemy._Defense.Text = $"Defensive Power: {_Enemy.player.getDefense()}";
+		// switch the turn
+		PlayersTurn = !PlayersTurn;
+		if (!PlayersTurn)
+		{
+			promptEnemyToAttack(_Player.player);
+		}
 	}
 
-	public void OnEnemyAttackPlayer()
+	private void promptEnemyToAttack(Character opponent)
 	{
-		_Enemy.player.attack(_Player.player);
-		_Player._HealthBar.Value = _Player.player.getHealth();
+		_Enemy.MakeChoice(opponent);
+	}
+
+	public void OnEnemyAction(char action)
+	{
+		if (!PlayersTurn) GameTurn(action);
 	}
 	public void OnPlayerAction(char action)
 	{
