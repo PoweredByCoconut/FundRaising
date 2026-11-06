@@ -9,7 +9,7 @@ public partial class GameController : Node2D
 	private int PlayerHealth;
 	private int EnemyHealth;
 
-	private bool PlayersTurn = false;
+	private bool PlayersTurn = true;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{

@@ -44,7 +44,7 @@ public partial class EnemyCharacter : CharacterBody2D
 			_LastAction.Text = "Attacked";
 		}
 		else if ((o_atkPwr > 5 && defense < 5)
-			|| defense < 5)
+			|| defense < 3)
 		{
 			activateChoice('D');
 			_LastAction.Text = "Defended";

@@ -7,8 +7,8 @@ namespace CharacterNS
   public class Character
   {
     public const int MAXHEALTH = 30;
-    private const int MAXATK = 12;
-    private const int MAXDEF = 12;
+    private const int MAXATK = 6;
+    private const int MAXDEF = 6;
     private int health;
     private int atkPwr;
     private int defense;
@@ -33,8 +33,7 @@ namespace CharacterNS
     {
       if (isAlive)
       {
-        this.defense = (this.defense + 3 > MAXDEF) ? MAXDEF : this.defense + 3; // increase by 5
-        this.health = (this.health + 1 > MAXHEALTH) ? MAXHEALTH : this.health + 1;
+        this.defense = (this.defense + 3 > MAXDEF) ? MAXDEF : this.defense + 2; // increase by 5
         this.atkPwr = (this.atkPwr - 1 < 1) ? 1 : this.atkPwr - 1;
       }
     }
@@ -47,9 +46,10 @@ namespace CharacterNS
       {
         // deal damage to the defender
         Boolean attacked = defending.recieveAtk(this.atkPwr);
-        int newAtk = (int)Math.Ceiling(this.atkPwr * 1.5);
+        // int newAtk = (int)Math.Ceiling(this.atkPwr * 1.5);
+        int newAtk = this.atkPwr + 1;
         this.atkPwr = (newAtk > MAXATK) ? MAXATK : newAtk;
-        this.defense = (this.defense - 1 < 1) ? 1 : this.defense - 1;
+        this.defense = (this.defense - 1 < 1) ? 1 : this.defense - 2;
         return attacked;
       }
       else
@@ -64,7 +64,7 @@ namespace CharacterNS
     {
       if (isAlive)
       {
-        this.health = (this.health + 7 > MAXHEALTH) ? MAXHEALTH : this.health + 7;
+        this.health = (this.health + 7 >= MAXHEALTH) ? MAXHEALTH : this.health + 2;
         this.atkPwr = (this.atkPwr + 1 > MAXATK) ? MAXATK : this.atkPwr + 1;
         this.defense = (this.defense - 1 < 1) ? 1 : this.defense - 1;
       }
