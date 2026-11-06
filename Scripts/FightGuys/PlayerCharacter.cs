@@ -10,6 +10,7 @@ public partial class PlayerCharacter : CharacterBody2D
 	public Label _AtkPwr;
 	public Label _Defense;
 	private Label _LastAction;
+	private AnimatedSprite2D _Sprite;
 	public Character player;
 	public override void _Ready()
 	{
@@ -18,6 +19,7 @@ public partial class PlayerCharacter : CharacterBody2D
 		_AtkPwr = GetNode<Label>("AtkPwr");
 		_Defense = GetNode<Label>("Defense");
 		_LastAction = GetNode<Label>("LastAction");
+		_Sprite = GetNode<AnimatedSprite2D>("Sprite");
 
 		player = new Character(30);
 		_HealthBar.Value = player.getHealth();

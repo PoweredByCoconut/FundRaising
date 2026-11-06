@@ -4,18 +4,118 @@
 [ext_resource type="Script" uid="uid://bmxhssurb5kun" path="res://Scripts/FightGuys/GameController.cs" id="2_htruo"]
 [ext_resource type="Script" uid="uid://1203e81y4acm" path="res://Scripts/FightGuys/PlayerCharacter.cs" id="2_vpp55"]
 [ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
+[ext_resource type="Texture2D" uid="uid://dauj427s5bf1b" path="res://assets/sprites/Shinobi/Idle.png" id="4_2dluk"]
+[ext_resource type="Texture2D" uid="uid://cthkk2k243jbi" path="res://assets/sprites/Fighter/Idle.png" id="6_vbfl8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgfkp"]
 radius = 24.0
 height = 48.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_xsafn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knlnu"]
 bg_color = Color(0.20871013, 0.20871016, 0.20871004, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq1h3"]
 bg_color = Color(0.44264498, 0.021757228, 0.01486617, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_em8be"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsafn"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gurhp"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30yow"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwfbk"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1aor"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_knlnu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_em8be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsafn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gurhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30yow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwfbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1aor")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36drb"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o70jo"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r01mm"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm0m3"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cth5"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dco5"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rq1h3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36drb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o70jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r01mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm0m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cth5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dco5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgfkp"]
 size = Vector2(2415, 43)
@@ -45,13 +145,6 @@ script = ExtResource("3_vpp55")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameController/EnemyCharacter" unique_id=1808305018]
 position = Vector2(-1.9073486e-06, 0)
 shape = SubResource("CapsuleShape2D_pgfkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="GameController/EnemyCharacter" unique_id=2109238798]
-position = Vector2(0, -4.7683716e-07)
-scale = Vector2(46, 46)
-texture = SubResource("AnimatedTexture_xsafn")
-region_enabled = true
-region_rect = Rect2(0, 0, 1, 1)
 
 [node name="HealthBar" type="ProgressBar" parent="GameController/EnemyCharacter" unique_id=548094483]
 offset_left = -96.0
@@ -86,6 +179,12 @@ offset_right = -82.0
 offset_bottom = -243.0
 text = "Defended"
 
+[node name="Sprite" type="AnimatedSprite2D" parent="GameController/EnemyCharacter" unique_id=1635381212]
+position = Vector2(2, -42)
+sprite_frames = SubResource("SpriteFrames_knlnu")
+autoplay = "default"
+frame_progress = 0.69720805
+
 [node name="PlayerCharacter" type="CharacterBody2D" parent="GameController" unique_id=1183180771]
 position = Vector2(-258, 71)
 script = ExtResource("2_vpp55")
@@ -93,13 +192,6 @@ script = ExtResource("2_vpp55")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameController/PlayerCharacter" unique_id=1623356871]
 position = Vector2(-1.9073486e-06, 0)
 shape = SubResource("CapsuleShape2D_pgfkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="GameController/PlayerCharacter" unique_id=1209603354]
-position = Vector2(0, -4.7683716e-07)
-scale = Vector2(46, 46)
-texture = SubResource("AnimatedTexture_xsafn")
-region_enabled = true
-region_rect = Rect2(0, 0, 1, 1)
 
 [node name="HealthBar" type="ProgressBar" parent="GameController/PlayerCharacter" unique_id=627693175]
 offset_left = -93.0
@@ -133,6 +225,12 @@ offset_top = -266.0
 offset_right = -82.0
 offset_bottom = -243.0
 text = "Attacked"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="GameController/PlayerCharacter" unique_id=1907911423]
+position = Vector2(5, -43)
+sprite_frames = SubResource("SpriteFrames_rq1h3")
+autoplay = "default"
+frame_progress = 0.9773595
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1136283972]
 
