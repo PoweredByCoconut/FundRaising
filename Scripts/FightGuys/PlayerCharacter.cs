@@ -9,7 +9,7 @@ public partial class PlayerCharacter : CharacterBody2D
 	public ProgressBar _HealthBar;
 	public Label _AtkPwr;
 	public Label _Defense;
-	private Label _LastAction;
+	public Label _LastAction;
 	private AnimatedSprite2D _Sprite;
 	public Character player;
 	public override void _Ready()
@@ -53,21 +53,21 @@ public partial class PlayerCharacter : CharacterBody2D
 		_Defense.Text = $"Defensive Power: {player.getDefense()}";
 	}
 
-	private void OnXPressed()
+	async void OnXPressed()
 	{
 		EmitSignal(SignalName.PlayerAction, 'A');
-		_LastAction.Text = "Attacked";
+		await ToSignal(GetTree().CreateTimer(3f), "timeout");
 	}
 
-	private void OnCPressed()
+	async void OnCPressed()
 	{
 		EmitSignal(SignalName.PlayerAction, 'D');
-		_LastAction.Text = "Defended";
+		await ToSignal(GetTree().CreateTimer(3f), "timeout");
 	}
 
-	private void OnZPressed()
+	async void OnZPressed()
 	{
 		EmitSignal(SignalName.PlayerAction, 'H');
-		_LastAction.Text = "Healed";
+		await ToSignal(GetTree().CreateTimer(3f), "timeout");
 	}
 }

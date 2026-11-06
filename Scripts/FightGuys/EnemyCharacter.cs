@@ -9,7 +9,7 @@ public partial class EnemyCharacter : CharacterBody2D
 	public ProgressBar _HealthBar;
 	public Label _AtkPwr;
 	public Label _Defense;
-	private Label _LastAction;
+	public Label _LastAction;
 	private AnimatedSprite2D _Sprite;
 	public Character player;
 	public override void _Ready()
@@ -40,22 +40,23 @@ public partial class EnemyCharacter : CharacterBody2D
 		int o_atkPwr = opponent.getAtkPwr();
 		int o_defense = opponent.getDefense();
 
+		var rng = new Random();
+		int randomness = rng.Next(8);
+
 		if ((atkPwr - o_defense) >= o_hp
-			|| (hp == 30) || o_hp > 15)
+			|| (hp == 30) || o_hp > 15 || randomness == 5
+		  || (atkPwr <= 2))
 		{
 			activateChoice('A');
-			_LastAction.Text = "Attacked";
 		}
 		else if ((o_atkPwr > 5 && defense < 5)
-			|| defense < 3)
+			 || randomness == 7)
 		{
 			activateChoice('D');
-			_LastAction.Text = "Defended";
 		}
 		else
 		{
 			activateChoice('H');
-			_LastAction.Text = "Healed";
 		}
 	}
 

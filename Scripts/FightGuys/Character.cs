@@ -6,7 +6,7 @@ namespace CharacterNS
 {
   public class Character
   {
-    public const int MAXHEALTH = 30;
+    public const int MAXHEALTH = 20;
     private const int MAXATK = 6;
     private const int MAXDEF = 6;
     private int health;
@@ -17,11 +17,11 @@ namespace CharacterNS
     // constructor
     public Character()
     {
-      new Character(30);
+      new Character(20);
     }
     public Character(int startingHealth)
     {
-      this.health = startingHealth;
+      this.health = (startingHealth <= MAXHEALTH) ? startingHealth : MAXHEALTH;
       this.atkPwr = 3;
       this.defense = 1;
       this.isAlive = true;

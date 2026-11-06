@@ -1,6 +1,7 @@
 using CharacterNS;
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class GameController : Node2D
 {
@@ -31,19 +32,22 @@ public partial class GameController : Node2D
 	{
 	}
 
-	private void GameTurn(char action)
+	private async Task GameTurn(char action)
 	{
 		if (_GameResult.Text != "") return;
 		// Point at whoever's turn it is
 		Character currentTurn;
 		Character defender;
+		Label actionMarker;
 		if (PlayersTurn)
-		{
+		{ 
+			actionMarker = _Player._LastAction;
 			currentTurn = _Player.player;
 			defender = _Enemy.player;
 		}
 		else
 		{
+			actionMarker = _Enemy._LastAction;
 			currentTurn = _Enemy.player;
 			defender = _Player.player;
 		}
@@ -51,12 +55,15 @@ public partial class GameController : Node2D
 		{
 			case 'A':
 				currentTurn.attack(defender);
+				actionMarker.Text = "Attacked";
 				break;
 			case 'D':
 				currentTurn.defend();
+				actionMarker.Text = "Defended";
 				break;
 			case 'H':
 				currentTurn.heal();
+				actionMarker.Text = "Healed";
 				break;
 			default:
 				break;
@@ -85,10 +92,13 @@ public partial class GameController : Node2D
 		_Enemy._Defense.Text = $"Defensive Power: {_Enemy.player.getDefense()}";
 		// switch the turn
 		PlayersTurn = !PlayersTurn;
+		GD.Print("Start");
+		await ToSignal(GetTree().CreateTimer(3f), "timeout");
 		if (!PlayersTurn)
 		{
 			promptEnemyToAttack(_Player.player);
 		}
+		GD.Print("Stop");
 	}
 
 	private void promptEnemyToAttack(Character opponent)
@@ -103,5 +113,11 @@ public partial class GameController : Node2D
 	public void OnPlayerAction(char action)
 	{
 		if (PlayersTurn) GameTurn(action);
+	}
+	async void wait()
+	{
+		GD.Print("Start");
+		await ToSignal(GetTree().CreateTimer(3f), "timeout");
+		GD.Print("Stop");
 	}
 }
