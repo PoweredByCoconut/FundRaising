@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="FundRaising"
-run/main_scene="uid://dbvj2u2jlpprx"
+run/main_scene="uid://bffgy8dg8e1uc"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://bfk8i82bk44bv"
 
 [display]
 

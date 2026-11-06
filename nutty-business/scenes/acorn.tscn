@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bjk7pkrnu0uxx"]
+
+[ext_resource type="Texture2D" uid="uid://oln1fbg4ue63" path="res://nutty-business/assets/sprites/Pixel Art Acorn Sprite.png" id="1_7v76u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g2els"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oygij"]
+radius = 14.0
+
+[node name="Acorn" type="RigidBody2D" unique_id=1288661613]
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_g2els")
+linear_damp = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1869994325]
+position = Vector2(2, -16)
+texture = ExtResource("1_7v76u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1321778100]
+position = Vector2(2, -16)
+shape = SubResource("CircleShape2D_oygij")

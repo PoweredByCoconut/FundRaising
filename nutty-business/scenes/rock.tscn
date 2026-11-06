@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://tnxb670cuafk"]
+
+[ext_resource type="Texture2D" uid="uid://c2yyhsm03ubs1" path="res://nutty-business/assets/sprites/rock.png" id="1_1di36"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g2els"]
+friction = 0.45
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1di36"]
+radius = 15.0
+
+[node name="Rock" type="RigidBody2D" unique_id=1288661613 groups=["rock"]]
+mass = 0.18
+physics_material_override = SubResource("PhysicsMaterial_g2els")
+linear_damp = 4.374
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1869994325]
+position = Vector2(2, -16)
+scale = Vector2(1.6399999, 2.0799997)
+texture = ExtResource("1_1di36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1321778100]
+position = Vector2(3, -15)
+shape = SubResource("CircleShape2D_1di36")
