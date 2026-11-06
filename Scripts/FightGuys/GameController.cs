@@ -6,6 +6,7 @@ public partial class GameController : Node2D
 {
 	private PlayerCharacter _Player;
 	private EnemyCharacter _Enemy;
+	private Label _GameResult;
 	private int PlayerHealth;
 	private int EnemyHealth;
 
@@ -16,9 +17,11 @@ public partial class GameController : Node2D
 		base._Ready();
 		_Player = GetNode<PlayerCharacter>("PlayerCharacter");
 		_Enemy = GetNode<EnemyCharacter>("EnemyCharacter");
+		_GameResult = GetNode<Label>("GameResult");
 
 		_Enemy.PlayerAction += OnEnemyAction;
 		_Player.PlayerAction += OnPlayerAction;
+		_GameResult.Text = "";
 
 		GameTurn('A');
 	}
@@ -30,6 +33,7 @@ public partial class GameController : Node2D
 
 	private void GameTurn(char action)
 	{
+		if (_GameResult.Text != "") return;
 		// Point at whoever's turn it is
 		Character currentTurn;
 		Character defender;
@@ -61,11 +65,11 @@ public partial class GameController : Node2D
 		{
 			if (defender == _Enemy.player)
 			{
-				GD.Print("Player Wins");
+				_GameResult.Text = "You Win!";
 			}
 			else if (defender == _Player.player)
 			{
-				GD.Print("Player Loses");
+				_GameResult.Text = "You Lose!";
 			}
 			else
 			{

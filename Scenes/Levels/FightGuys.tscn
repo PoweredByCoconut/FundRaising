@@ -183,7 +183,7 @@ text = "Defended"
 position = Vector2(2, -42)
 sprite_frames = SubResource("SpriteFrames_knlnu")
 autoplay = "default"
-frame_progress = 0.69720805
+frame_progress = 0.66931325
 
 [node name="PlayerCharacter" type="CharacterBody2D" parent="GameController" unique_id=1183180771]
 position = Vector2(-258, 71)
@@ -230,7 +230,21 @@ text = "Attacked"
 position = Vector2(5, -43)
 sprite_frames = SubResource("SpriteFrames_rq1h3")
 autoplay = "default"
-frame_progress = 0.9773595
+frame_progress = 0.9494649
+
+[node name="GameResult" type="Label" parent="GameController" unique_id=1373028629]
+top_level = true
+offset_left = -333.0
+offset_top = -171.0
+offset_right = 241.0
+offset_bottom = 7.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.59607846)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 130
+text = "YOU WIN"
+horizontal_alignment = 1
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1136283972]
 
