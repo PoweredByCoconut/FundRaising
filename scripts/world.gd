@@ -15,15 +15,21 @@ const BLOCK_SCENE = preload("res://scenes/block.tscn")  # ← change path if nee
 
 # Which blocktype each row should use (top → bottom)
 # 0=red, 1=green, 2=blue, 3=purp, 4=yellow, 5=orange, 6=wood
-var row_types: Array[int] = [0, 1, 2, 3, 4, 5]
+var possible_types: Array[int] = [0, 1, 2, 3, 4, 5]
 @onready var score_label: Label = $"Score Label"
-@onready var live_counter: Label = $"Live Counter"
+@onready var lives_container: HBoxContainer = $LivesContainer   # ← your new container
 @onready var ball: CharacterBody2D = $ball
 @onready var paddle: CharacterBody2D = $paddle
 @onready var blocks_node: Node = $blocks
+@onready var game_over_screen: Control = $GameOverScreen
+@onready var game_over_label: Label = $GameOverScreen/GameOverLabel
+@onready var final_score_label: Label = $GameOverScreen/FinalScoreLabel
+@export var ball_life_texture: Texture2D
 
 var score: int = 0
-var lives: int = 3
+var lives: int = 2
+const MAX_LIVES := 5
+var bricks_left: int = 0
 
 func _ready() -> void:
 	# Clear any blocks that might already be in the scene (the reference ones)
@@ -31,7 +37,7 @@ func _ready() -> void:
 	
 	# Fill the board for the first time
 	refill_board()
-	
+	update_lives_display()
 	update_ui()
 
 func _on_block_destroyed(points: int) -> void:
@@ -40,14 +46,16 @@ func _on_block_destroyed(points: int) -> void:
 	score += points
 	update_ui()
 
-	# Wait one frame so queue_free() has finished
-	await get_tree().process_frame
+	bricks_left -= 1
+	print("Bricks left: ", bricks_left)          # ← debug
 
-	if is_board_empty():
+	if bricks_left <= 0:
 		level_cleared()
 
+
 func is_board_empty() -> bool:
-	return blocks_node.get_child_count() == 0
+	return bricks_left <= 0
+
 
 func level_cleared() -> void:
 	print("Board cleared!")
@@ -55,55 +63,94 @@ func level_cleared() -> void:
 	update_ui()
 
 	ball.launched = false
-	# ball.velocity = Vector2.ZERO   # optional
 
 	clear_board()
-	await get_tree().process_frame   # make sure old blocks are gone
-
+	await get_tree().create_timer(0.15).timeout   # safer than process_frame
 	refill_board()
 
 
 func clear_board() -> void:
 	for child in blocks_node.get_children():
 		child.queue_free()
+	bricks_left = 0
 
 
 func refill_board() -> void:
+	var row_types = possible_types.duplicate()
+	row_types.shuffle()
+
+	bricks_left = 0
+
 	for row in range(rows):
-		var type: int = row_types[row] if row < row_types.size() else 0
+		var type: int = row_types[row % row_types.size()]
 
 		for col in range(columns):
 			var block = BLOCK_SCENE.instantiate()
-
-			# Set the metadata BEFORE adding to the tree
 			block.set_meta("blocktype", type)
 
-			# Position
 			var x = start_position.x + col * (brick_width + horizontal_gap)
 			var y = start_position.y + row * (brick_height + vertical_gap)
 			block.position = Vector2(x, y)
 
 			blocks_node.add_child(block)
-
-			# Connect the signal
 			block.destroyed.connect(_on_block_destroyed)
 
-	print("Board refilled with ", blocks_node.get_child_count(), " blocks")
+			bricks_left += 1
+
+	print("Board refilled with ", bricks_left, " blocks")
+func update_ui() -> void:
+	score_label.text = "Score: %d" % score
+	# You can remove or hide the old "Lives: X" label now
+
+func update_lives_display() -> void:
+	# Clear old icons
+	for child in lives_container.get_children():
+		child.queue_free()
+
+	# Create one icon per remaining life
+	for i in range(lives):
+		var icon = TextureRect.new()
+		icon.texture = ball_life_texture
+		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		icon.custom_minimum_size = Vector2(24, 24)   # size of each life icon
+		lives_container.add_child(icon)
+
 
 func _on_death() -> void:
 	lives -= 1
-	update_ui()
+	update_lives_display()
 
-	if lives <= 0:
-		# Game over logic
-		print("Game Over")
-		# get_tree().paused = true
-		# or show game over screen
+	if lives < 0:
+		game_over()
 	else:
-		# Reset ball
 		ball.launched = false
-		# ball.reset_position()  # if you have this function
+		# reset ball position here if you have a function for it
 
-func update_ui() -> void:
-	score_label.text = "Score: %d" % score
-	live_counter.text = "Lives: %d" % lives
+
+func game_over() -> void:
+	# Stop gameplay
+	ball.launched = false
+	ball.velocity = Vector2.ZERO
+
+	# Clear the board
+	clear_board()
+
+	# Hide normal UI
+	score_label.text = ""
+	lives_container.visible = false
+
+	# Show Game Over screen
+	final_score_label.text = "SCORE: %d" % score
+	game_over_screen.visible = true
+
+	# Optional: pause the game
+	# get_tree().paused = true
+	
+func _process(_delta: float) -> void:
+	if game_over_screen.visible and Input.is_action_just_pressed("spacebar"):  # Enter / Space
+		restart_game()
+
+
+func restart_game() -> void:
+	get_tree().reload_current_scene()

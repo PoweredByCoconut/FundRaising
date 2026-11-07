@@ -317,7 +317,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"bluebreak",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [],
 "loop": 1,
@@ -368,7 +368,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"greenbreak",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -460,7 +460,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"purpbreak",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -506,7 +506,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"redbreak",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -560,7 +560,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"yellowbreak",
-"speed": 5.0
+"speed": 30.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_deahs"]
@@ -575,7 +575,7 @@ metadata/blocktype = 0
 position = Vector2(0, 0.9741841)
 scale = Vector2(0.8730771, 0.6004204)
 sprite_frames = SubResource("SpriteFrames_deahs")
-animation = &"orangebreak"
+animation = &"yellowbreak"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2085855737]
 position = Vector2(0, 1)

@@ -8,12 +8,12 @@ signal destroyed(points: int)
 
 func _ready() -> void:
 	match blockType:
-		0: anim.play("red")
-		1: anim.play("green")
-		2: anim.play("blue")
-		3: anim.play("purp")
-		4: anim.play("yellow")
-		5: anim.play("orange")
+		0: anim.play_backwards("redbreak")
+		1: anim.play_backwards("greenbreak")
+		2: anim.play_backwards("bluebreak")
+		3: anim.play_backwards("purpbreak")
+		4: anim.play_backwards("yellowbreak")
+		5: anim.play_backwards("orangebreak")
 		6:
 			print("wood")
 			destructable = false
