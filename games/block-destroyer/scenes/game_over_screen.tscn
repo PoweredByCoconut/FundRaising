@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bcitmmkh0h4d5"]
+
+[ext_resource type="FontFile" uid="uid://ngcqhebk4opq" path="res://games/block-destroyer/assets/SkylinePixel - Community Pack/TTF/Skyline Pixel Stroke.ttf" id="1_wojlb"]
+
+[node name="GameOverScreen" type="Control" unique_id=333678961]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1856147736]
+layout_mode = 0
+offset_left = -110.0
+offset_top = -35.0
+offset_right = 106.0
+offset_bottom = 1.0
+theme_override_fonts/font = ExtResource("1_wojlb")
+theme_override_font_sizes/font_size = 50
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="FinalScoreLabel" type="Label" parent="." unique_id=1274811116]
+layout_mode = 0
+offset_left = -221.0
+offset_top = 50.0
+offset_right = 223.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("1_wojlb")
+theme_override_font_sizes/font_size = 40
+text = "SCORE: 0"
+horizontal_alignment = 1
+
+[node name="RestartLabel" type="Label" parent="." unique_id=1255864023]
+layout_mode = 0
+offset_left = -284.0
+offset_top = 137.0
+offset_right = 287.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("1_wojlb")
+theme_override_font_sizes/font_size = 30
+text = "PRESS SPACEBAR TO RESTART"
+horizontal_alignment = 1
