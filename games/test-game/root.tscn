@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://biitd3rddl6ri"]
+
+[ext_resource type="PackedScene" uid="uid://dsdpjonyn3tgi" path="res://menu/PauseMenu.tscn" id="1_884kb"]
+
+[node name="Root" type="Node2D" unique_id=1010298414]
+
+[node name="PauseMenu" parent="." unique_id=501292994 instance=ExtResource("1_884kb")]
+visible = false
