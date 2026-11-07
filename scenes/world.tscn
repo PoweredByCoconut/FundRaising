@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dnhd4423jm257"]
+
+[ext_resource type="PackedScene" uid="uid://dgfoykrb1euv0" path="res://scenes/paddle.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://b783704ba1q1w" path="res://scripts/world.gd" id="1_qfnet"]
+[ext_resource type="PackedScene" uid="uid://cykeet3jk270h" path="res://scenes/board.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://dug7s2ewohq8i" path="res://scenes/ball.tscn" id="3_ball"]
+[ext_resource type="PackedScene" uid="uid://c7t0nv5y1er02" path="res://scenes/score_label.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://cgs678oo0xy11" path="res://scenes/block.tscn" id="5_71j4m"]
+
+[node name="world" type="Node2D" unique_id=841373944]
+script = ExtResource("1_qfnet")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1604297821]
+
+[node name="paddle" parent="." unique_id=547077066 instance=ExtResource("1_nnsk1")]
+position = Vector2(0, 233)
+
+[node name="board" parent="." unique_id=1374996621 instance=ExtResource("2_rwgxs")]
+position = Vector2(-11, 391)
+scale = Vector2(-5.309655, 3.6368842)
+
+[node name="ball" parent="." unique_id=999999999 instance=ExtResource("3_ball")]
+
+[node name="Score Label" parent="." unique_id=1656524980 instance=ExtResource("4_k0juu")]
+offset_left = 303.0
+offset_top = -293.0
+offset_right = 313.0
+offset_bottom = -270.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Live Counter" parent="." unique_id=1580166484 instance=ExtResource("4_k0juu")]
+offset_left = 301.0
+offset_top = -274.0
+offset_right = 362.0
+offset_bottom = -251.0
+text = "Lives: 3"
+metadata/_edit_use_anchors_ = true
+
+[node name="blocks" type="Node2D" parent="." unique_id=442538597]
+
+[node name="block" parent="blocks" unique_id=1445048385 instance=ExtResource("5_71j4m")]
+position = Vector2(-7.6293945e-06, -27.000008)

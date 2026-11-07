@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cgs678oo0xy11"]
+
+[ext_resource type="Script" uid="uid://bmawbbi734bwi" path="res://scripts/block.gd" id="1_8r6n6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deahs"]
+size = Vector2(28, 10)
+
+[node name="block" type="StaticBody2D" unique_id=1445048385 groups=["blocks"]]
+scale = Vector2(1.5, 1.54)
+script = ExtResource("1_8r6n6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1334179337]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2085855737]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_deahs")
+debug_color = Color(0.92326117, 0.11409574, 0.62182593, 0.41960785)
