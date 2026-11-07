@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce8eoyybqm26d"]
+
+[ext_resource type="Script" uid="uid://bxr53nqs5wju5" path="res://games/space-game/scripts/shield.gd" id="1_ohv3a"]
+[ext_resource type="Texture2D" uid="uid://b0o5w5cuet1bh" path="res://games/space-game/textures/Shield.png" id="1_vtru8"]
+[ext_resource type="Shader" uid="uid://86apyd4bvyet" path="res://games/space-game/scripts/shield.gdshader" id="2_e3gf5"]
+[ext_resource type="AudioStream" uid="uid://28yao5hfkuqk" path="res://games/space-game/Music/shieldBlock.mp3" id="4_gsp1a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gsp1a"]
+shader = ExtResource("2_e3gf5")
+shader_parameter/ready = true
+
+[node name="Shield" type="Node2D"]
+script = ExtResource("1_ohv3a")
+
+[node name="Shield2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_gsp1a")
+position = Vector2(74, 0.9999924)
+rotation = 0.7853982
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_vtru8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(95, -15, 72, -50, 68, 61, 92, 30)
+
+[node name="BulletCooldown" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="shieldBlockAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gsp1a")
+volume_db = 10.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

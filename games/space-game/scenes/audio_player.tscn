@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt5b68hq6y50u"]
+
+[ext_resource type="Script" uid="uid://dgmvkvyx1j8tt" path="res://games/space-game/scripts/audio_player.gd" id="1_1qhh7"]
+
+[node name="Audio" type="AudioStreamPlayer"]
+process_mode = 3
+script = ExtResource("1_1qhh7")
+
+[connection signal="finished" from="." to="." method="play_level_music"]

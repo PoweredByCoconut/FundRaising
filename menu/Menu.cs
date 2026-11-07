@@ -16,4 +16,9 @@ public partial class Menu : Node
 	{
 		GetTree().ChangeSceneToFile("res://games/nutty-business/levels/level_1.tscn");
 	}
+
+    public void LoadProjectAegis()
+    {
+        GetTree().ChangeSceneToFile("res://games/space-game/scenes/main_menu.tscn");
+    }
 }

@@ -1,0 +1,32 @@
+[gd_scene load_steps=9 format=3 uid="uid://ct556i38os2k1"]
+
+[ext_resource type="Script" uid="uid://bwp3ts86dncmf" path="res://games/space-game/scripts/game.gd" id="1_gee14"]
+[ext_resource type="PackedScene" uid="uid://c02kjvske2c8q" path="res://games/space-game/scenes/background.tscn" id="1_iywne"]
+[ext_resource type="PackedScene" uid="uid://b3r7rykyto3k8" path="res://games/space-game/scenes/world.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cxb6mbx0owd4h" path="res://games/space-game/scenes/shield.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dp8jrywwr3cj7" path="res://games/space-game/scenes/game_over.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cwayn25pk8dqf" path="res://games/space-game/scenes/pause_menu.tscn" id="8_vtaks"]
+[ext_resource type="Script" uid="uid://b4iw35bldj3fj" path="res://games/space-game/scripts/camera.gd" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://ycrrve8fsttx" path="res://games/space-game/scenes/survival_timer.tscn" id="10_vtaks"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_gee14")
+
+[node name="Background" parent="." instance=ExtResource("1_iywne")]
+
+[node name="Timer" parent="." instance=ExtResource("10_vtaks")]
+
+[node name="world" parent="." instance=ExtResource("1_uwrxv")]
+
+[node name="Shield" parent="." instance=ExtResource("2_yqjtg")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_vtaks")]
+z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("9_0tnpc")
+
+[node name="GameOver" parent="." instance=ExtResource("7_u5sy4")]
+visible = false
+
+[connection signal="game_over" from="world" to="." method="game_over"]

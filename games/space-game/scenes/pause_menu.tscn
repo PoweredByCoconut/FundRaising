@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwayn25pk8dqf"]
+
+[ext_resource type="Script" uid="uid://8c28gvmjsj7v" path="res://games/space-game/scripts/pause_menu.gd" id="1_5d2l8"]
+[ext_resource type="Theme" uid="uid://dw8ljsikofh2f" path="res://games/space-game/textures/gameTheme.tres" id="2_7l7mv"]
+[ext_resource type="Texture2D" uid="uid://dmblpnkwab0qe" path="res://games/space-game/textures/pauseicon.png" id="5_v4r4p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88e76"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.3647059, 0.1254902, 0.6862745, 0.99607843)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 346.0
+offset_bottom = 296.0
+script = ExtResource("1_5d2l8")
+
+[node name="pauseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = -551.0
+offset_top = -306.0
+offset_right = -495.0
+offset_bottom = -244.0
+icon = ExtResource("5_v4r4p")
+
+[node name="pauseBg" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -174.0
+offset_top = -161.0
+offset_right = 168.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="pauseTitle" type="RichTextLabel" parent="pauseBg"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 321.0
+offset_bottom = 62.0
+theme = ExtResource("2_7l7mv")
+text = "Game Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pauseMidgr" type="Panel" parent="pauseBg"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 96.0
+offset_right = 314.0
+offset_bottom = 276.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_88e76")
+
+[node name="resumeBtn" type="Button" parent="pauseBg/pauseMidgr"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.014
+anchor_bottom = 0.022000002
+offset_left = 41.0
+offset_top = 45.0
+offset_right = 242.968
+offset_bottom = 84.04
+toggle_mode = true
+button_pressed = true
+text = "Resume"
+
+[node name="mmenuBtn" type="Button" parent="pauseBg/pauseMidgr"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19500001
+anchor_top = 0.26000002
+anchor_right = 0.19500001
+anchor_bottom = 0.26000002
+offset_left = -15.160004
+offset_top = 72.2
+offset_right = 191.84
+offset_bottom = 116.2
+text = "Main Menu"
+
+[connection signal="pressed" from="pauseBtn" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="pauseBg/pauseMidgr/resumeBtn" to="." method="_on_resume_pressed"]
+[connection signal="button_down" from="pauseBg/pauseMidgr/mmenuBtn" to="." method="_on_menu_pressed"]

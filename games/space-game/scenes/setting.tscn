@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://tf12dqxd0pi8"]
+
+[ext_resource type="Script" uid="uid://cildtdrf0sbd2" path="res://games/space-game/scripts/setting.gd" id="1_sjyvh"]
+[ext_resource type="PackedScene" uid="uid://c02kjvske2c8q" path="res://games/space-game/scenes/background.tscn" id="2_7k1fe"]
+[ext_resource type="Theme" uid="uid://dw8ljsikofh2f" path="res://games/space-game/textures/gameTheme.tres" id="3_scrng"]
+
+[node name="Setting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sjyvh")
+
+[node name="Background" parent="." instance=ExtResource("2_7k1fe")]
+position = Vector2(608, 511)
+scale = Vector2(0.85, 0.85)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("3_scrng")
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+value = 100.0
+tick_count = 20
+
+[node name="Mute" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Mute"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_stretch_ratio = 1.1
+
+[node name="Window Mode" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Window Mode"
+
+[node name="WindowMode2" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Full-screen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Borderless Windowed"
+popup/item_2/id = 2
+popup/item_3/text = "Borderless Full-Screen"
+popup/item_3/id = 3
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 60
+text = "BACK"
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/WindowMode2" to="." method="_on_resolution_item_selected"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

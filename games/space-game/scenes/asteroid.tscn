@@ -1,0 +1,139 @@
+[gd_scene load_steps=21 format=3 uid="uid://c2x6hn4eqchwo"]
+
+[ext_resource type="Texture2D" uid="uid://cw0xud1iddocf" path="res://games/space-game/textures/asteroid1.png" id="1_6mo6b"]
+[ext_resource type="Script" uid="uid://dnf0bolp3grsb" path="res://games/space-game/scripts/asteroid.gd" id="2_6mo6b"]
+[ext_resource type="Texture2D" uid="uid://dfevj7dqtihee" path="res://games/space-game/textures/asteroid2.png" id="3_pnq5b"]
+[ext_resource type="Texture2D" uid="uid://do0fyaj6evuqa" path="res://games/space-game/textures/asteroid3.png" id="4_pwrvu"]
+[ext_resource type="Texture2D" uid="uid://rtg70amt5tdt" path="res://games/space-game/textures/meteorTail1.png" id="5_kkwpv"]
+[ext_resource type="Texture2D" uid="uid://bkgkfgomaou3h" path="res://games/space-game/textures/meteorTail2.png" id="6_x1lus"]
+[ext_resource type="Texture2D" uid="uid://d1fjwwhvxbtw7" path="res://games/space-game/textures/meteorTail3.png" id="7_71tyo"]
+[ext_resource type="Texture2D" uid="uid://brhaix4iwlpqf" path="res://games/space-game/textures/explosion1.png" id="8_2wa65"]
+[ext_resource type="Texture2D" uid="uid://cv45dhwgh3vmu" path="res://games/space-game/textures/explosion2.png" id="9_ug8x5"]
+[ext_resource type="Texture2D" uid="uid://ciqnaudrwd25j" path="res://games/space-game/textures/explosion3.png" id="10_foul2"]
+[ext_resource type="Texture2D" uid="uid://da5mrjakexx3k" path="res://games/space-game/textures/explosion4.png" id="11_e1oj2"]
+[ext_resource type="Texture2D" uid="uid://dgeyqddj8c3xy" path="res://games/space-game/textures/explosion5.png" id="12_fae33"]
+[ext_resource type="AudioStream" uid="uid://cc587ba7ucrud" path="res://games/space-game/Music/impact.wav" id="13_ug8x5"]
+
+[sub_resource type="Animation" id="Animation_osw8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_kkwpv")]
+}
+
+[sub_resource type="Animation" id="Animation_jm418"]
+resource_name = "tailanimation"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_kkwpv"), ExtResource("6_x1lus"), ExtResource("7_71tyo")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2wa65"]
+_data = {
+&"RESET": SubResource("Animation_osw8w"),
+&"tailanimation": SubResource("Animation_jm418")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6mo6b"]
+radius = 12.0415945
+
+[sub_resource type="Animation" id="Animation_2jebp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_2wa65")]
+}
+
+[sub_resource type="Animation" id="Animation_u1gqy"]
+resource_name = "explosion_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_2wa65"), ExtResource("9_ug8x5"), ExtResource("10_foul2"), ExtResource("11_e1oj2"), ExtResource("12_fae33")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ymjcv"]
+_data = {
+&"RESET": SubResource("Animation_2jebp"),
+&"explosion_animation": SubResource("Animation_u1gqy")
+}
+
+[node name="Asteroid" type="Node2D"]
+script = ExtResource("2_6mo6b")
+textures = Array[Texture2D]([ExtResource("1_6mo6b"), ExtResource("3_pnq5b"), ExtResource("4_pwrvu")])
+
+[node name="AsteroidTail" type="Sprite2D" parent="."]
+position = Vector2(-10, -2.3841858e-07)
+rotation = 3.9269907
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_kkwpv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AsteroidTail"]
+libraries = {
+&"": SubResource("AnimationLibrary_2wa65")
+}
+autoplay = "tailanimation"
+
+[node name="AsteroidSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.017, 0.017)
+texture = ExtResource("1_6mo6b")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_6mo6b")
+
+[node name="Lifespan" type="Timer" parent="."]
+wait_time = 15.0
+
+[node name="Explosion" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(6, 0)
+rotation = -1.5707964
+texture = ExtResource("8_2wa65")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Explosion"]
+libraries = {
+&"": SubResource("AnimationLibrary_ymjcv")
+}
+
+[node name="ImpactAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_ug8x5")
+
+[connection signal="area_entered" from="Area2D" to="." method="hit"]
+[connection signal="timeout" from="Lifespan" to="." method="kill"]
+[connection signal="animation_finished" from="Explosion/AnimationPlayer" to="." method="despawn"]

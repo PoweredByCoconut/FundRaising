@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://6xj8irx2kp0y"]
+
+[ext_resource type="Script" uid="uid://g12bkee2c2qn" path="res://games/space-game/scripts/shield_bullet.gd" id="1_qbyru"]
+[ext_resource type="Texture2D" uid="uid://db86b6iddsr1r" path="res://games/space-game/textures/beam1.png" id="1_vcsdw"]
+[ext_resource type="Texture2D" uid="uid://cx7ai2g2ta0r4" path="res://games/space-game/textures/beam2.png" id="2_qbyru"]
+
+[sub_resource type="Animation" id="Animation_tf5mt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vcsdw")]
+}
+
+[sub_resource type="Animation" id="Animation_hbtow"]
+resource_name = "beamAnimation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("1_vcsdw"), ExtResource("2_qbyru")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xnywj"]
+_data = {
+&"RESET": SubResource("Animation_tf5mt"),
+&"beamAnimation": SubResource("Animation_hbtow")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbyru"]
+size = Vector2(76, 118)
+
+[node name="ShieldBullet" type="Node2D"]
+script = ExtResource("1_qbyru")
+
+[node name="shieldBeam" type="Sprite2D" parent="."]
+rotation = 1.5707964
+scale = Vector2(0.62, 0.56)
+texture = ExtResource("1_vcsdw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="shieldBeam"]
+libraries = {
+&"": SubResource("AnimationLibrary_xnywj")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qbyru")
