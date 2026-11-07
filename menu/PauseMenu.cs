@@ -6,6 +6,7 @@ public partial class PauseMenu : CanvasLayer
 		if (@event.IsActionPressed("Pause") && !@event.IsEcho())
 		{
 			Visible = ! Visible;
+			GetTree().Paused = !Visible;
 		}
 	}
 
