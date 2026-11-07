@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dug7s2ewohq8i"]
+
+[ext_resource type="Script" uid="uid://ogty7q4jot6c" path="res://games/block-destroyer/scripts/ball.gd" id="1_7s4qf"]
+[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://games/block-destroyer/assets/spritesheet-breakout.png" id="2_cxlvu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_deahs"]
+radius = 12.0
+
+[node name="ball" type="CharacterBody2D" unique_id=71029112]
+motion_mode = 1
+safe_margin = 1.031
+script = ExtResource("1_7s4qf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=660263192]
+texture_filter = 1
+position = Vector2(-3907.0002, -153)
+scale = Vector2(1.2116686, 1.214558)
+texture = ExtResource("2_cxlvu")
+offset = Vector2(3224.5762, 126.071236)
+region_enabled = true
+region_rect = Rect2(32.475975, 32.90694, 15.102974, 14.492756)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2132265290]
+shape = SubResource("CircleShape2D_deahs")

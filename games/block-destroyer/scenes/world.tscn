@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dnhd4423jm257"]
+
+[ext_resource type="PackedScene" uid="uid://dgfoykrb1euv0" path="res://games/block-destroyer/scenes/paddle.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://b783704ba1q1w" path="res://games/block-destroyer/scripts/world.gd" id="1_qfnet"]
+[ext_resource type="Texture2D" uid="uid://dlfeu50jl4b5k" path="res://games/block-destroyer/assets/ball_life.tres" id="2_qfnet"]
+[ext_resource type="PackedScene" uid="uid://cykeet3jk270h" path="res://games/block-destroyer/scenes/board.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://dug7s2ewohq8i" path="res://games/block-destroyer/scenes/ball.tscn" id="3_ball"]
+[ext_resource type="PackedScene" uid="uid://c7t0nv5y1er02" path="res://games/block-destroyer/scenes/score_label.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://bcitmmkh0h4d5" path="res://games/block-destroyer/scenes/game_over_screen.tscn" id="7_i7141"]
+
+[node name="world" type="Node2D" unique_id=841373944]
+script = ExtResource("1_qfnet")
+ball_life_texture = ExtResource("2_qfnet")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1604297821]
+
+[node name="paddle" parent="." unique_id=547077066 instance=ExtResource("1_nnsk1")]
+position = Vector2(0, 233)
+
+[node name="board" parent="." unique_id=1374996621 instance=ExtResource("2_rwgxs")]
+position = Vector2(-11, 391)
+scale = Vector2(-5.309655, 3.6368842)
+
+[node name="ball" parent="." unique_id=999999999 instance=ExtResource("3_ball")]
+
+[node name="Score Label" parent="." unique_id=1656524980 instance=ExtResource("4_k0juu")]
+offset_left = -233.0
+offset_top = -242.0
+offset_right = -172.0
+offset_bottom = -219.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LivesContainer" type="HBoxContainer" parent="." unique_id=2097462882]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 174.0
+offset_top = -243.0
+offset_right = 214.0
+offset_bottom = -203.0
+grow_horizontal = 0
+
+[node name="blocks" type="Node2D" parent="." unique_id=442538597]
+
+[node name="GameOverScreen" parent="." unique_id=333678961 instance=ExtResource("7_i7141")]
+visible = false
+offset_top = -39.0
+offset_bottom = -39.0

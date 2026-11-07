@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://b3r7rykyto3k8"]
+
+[ext_resource type="Texture2D" uid="uid://csh3nkhhgj7bk" path="res://games/space-game/textures/Earth.png" id="1_4wyf3"]
+[ext_resource type="Script" uid="uid://8q1kksnv1mxd" path="res://games/space-game/scripts/world.gd" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://c2x6hn4eqchwo" path="res://games/space-game/scenes/asteroid.tscn" id="3_4wyf3"]
+[ext_resource type="Shader" uid="uid://bi5rr2lqjtbxr" path="res://games/space-game/scripts/damagedEarth.gdshader" id="3_71j4m"]
+[ext_resource type="Texture2D" uid="uid://ckv26u223uakp" path="res://games/space-game/textures/Damaged Earth.png" id="3_k0juu"]
+[ext_resource type="Shader" uid="uid://bkhfqnoipqp5r" path="res://games/space-game/scripts/earth.gdshader" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://00ktt1qpks1b" path="res://games/space-game/scenes/ship.tscn" id="7_i7141"]
+[ext_resource type="AudioStream" uid="uid://bdtfuo58n3tsd" path="res://games/space-game/Music/earthCrumble.wav" id="8_4mrxx"]
+[ext_resource type="AudioStream" uid="uid://cm6ktw4pticch" path="res://games/space-game/Music/ufoNoise.wav" id="9_7r4gi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfnet"]
+shader = ExtResource("3_71j4m")
+shader_parameter/earth = ExtResource("1_4wyf3")
+shader_parameter/width = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i7141"]
+shader = ExtResource("6_qfnet")
+shader_parameter/follow = 0.8
+shader_parameter/width = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fj7yv"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4wyf3"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("2_rwgxs")
+asteroid_scene = ExtResource("3_4wyf3")
+crater_radius = 20
+
+[node name="DamagedEarth" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qfnet")
+texture = ExtResource("3_k0juu")
+
+[node name="Earth" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_i7141")
+texture = ExtResource("1_4wyf3")
+
+[node name="AsteroidSpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="AlienSpawnTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_fj7yv")
+
+[node name="LoseArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoseArea"]
+shape = SubResource("CircleShape2D_4wyf3")
+
+[node name="Clock" type="Timer" parent="."]
+autostart = true
+
+[node name="earthCrumbleAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_4mrxx")
+volume_db = 13.0
+
+[node name="Ship" parent="." instance=ExtResource("7_i7141")]
+
+[node name="alienAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_7r4gi")
+volume_db = 10.0
+
+[connection signal="timeout" from="AsteroidSpawnTimer" to="." method="spawn_asteroid"]
+[connection signal="timeout" from="AlienSpawnTimer" to="." method="spawn_alien"]
+[connection signal="area_entered" from="Area2D" to="." method="on_hit"]
+[connection signal="area_entered" from="LoseArea" to="." method="on_lose_hit"]
+[connection signal="timeout" from="Clock" to="." method="increment_timer"]

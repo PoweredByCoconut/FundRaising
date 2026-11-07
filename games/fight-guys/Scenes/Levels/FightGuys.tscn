@@ -1,0 +1,276 @@
+[gd_scene format=3 uid="uid://bckhwgj31dkcj"]
+
+[ext_resource type="Script" uid="uid://br8gulvvqoyfe" path="res://games/fight-guys/Scripts/FightGuys/FightGuys.cs" id="1_n1bhq"]
+[ext_resource type="Script" uid="uid://bmxhssurb5kun" path="res://games/fight-guys/Scripts/FightGuys/GameController.cs" id="2_htruo"]
+[ext_resource type="Script" uid="uid://1203e81y4acm" path="res://games/fight-guys/Scripts/FightGuys/PlayerCharacter.cs" id="2_vpp55"]
+[ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://games/fight-guys/Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
+[ext_resource type="Texture2D" uid="uid://dauj427s5bf1b" path="res://games/fight-guys/assets/sprites/Shinobi/Idle.png" id="4_2dluk"]
+[ext_resource type="Texture2D" uid="uid://cthkk2k243jbi" path="res://games/fight-guys/assets/sprites/Fighter/Idle.png" id="6_vbfl8"]
+[ext_resource type="PackedScene" uid="uid://dsdpjonyn3tgi" path="res://menu/PauseMenu.tscn" id="7_ga4n8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgfkp"]
+radius = 24.0
+height = 48.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knlnu"]
+bg_color = Color(0.20871013, 0.20871016, 0.20871004, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq1h3"]
+bg_color = Color(0.44264498, 0.021757228, 0.01486617, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_em8be"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsafn"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gurhp"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30yow"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwfbk"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1aor"]
+atlas = ExtResource("4_2dluk")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_knlnu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_em8be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsafn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gurhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30yow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwfbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1aor")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36drb"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o70jo"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r01mm"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm0m3"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cth5"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dco5"]
+atlas = ExtResource("6_vbfl8")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rq1h3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36drb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o70jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r01mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm0m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cth5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dco5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgfkp"]
+size = Vector2(2415, 43)
+
+[sub_resource type="Gradient" id="Gradient_htruo"]
+colors = PackedColorArray(0, 0.30980393, 0.49411765, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vpp55"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mfu4w"]
+width = 4
+height = 2
+noise = SubResource("FastNoiseLite_vpp55")
+color_ramp = SubResource("Gradient_htruo")
+as_normal_map = true
+
+[node name="FightGuys" type="Node2D" unique_id=607458174]
+script = ExtResource("1_n1bhq")
+
+[node name="GameController" type="Node2D" parent="." unique_id=559764104]
+script = ExtResource("2_htruo")
+
+[node name="EnemyCharacter" type="CharacterBody2D" parent="GameController" unique_id=1458394751]
+position = Vector2(148, 70)
+script = ExtResource("3_vpp55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameController/EnemyCharacter" unique_id=1808305018]
+position = Vector2(-1.9073486e-06, 0)
+shape = SubResource("CapsuleShape2D_pgfkp")
+
+[node name="HealthBar" type="ProgressBar" parent="GameController/EnemyCharacter" unique_id=548094483]
+offset_left = -96.0
+offset_top = -139.0
+offset_right = 84.0
+offset_bottom = -112.0
+theme_override_styles/background = SubResource("StyleBoxFlat_knlnu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rq1h3")
+max_value = 30.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="AtkPwr" type="Label" parent="GameController/EnemyCharacter" unique_id=589969616]
+offset_left = -202.0
+offset_top = -181.0
+offset_right = -95.0
+offset_bottom = -158.0
+text = "Attack Power:"
+
+[node name="Defense" type="Label" parent="GameController/EnemyCharacter" unique_id=1711846992]
+offset_left = -49.0
+offset_top = -178.0
+offset_right = 85.0
+offset_bottom = -155.0
+text = "Defensive Power:"
+
+[node name="LastAction" type="Label" parent="GameController/EnemyCharacter" unique_id=433774969]
+offset_left = -122.0
+offset_top = -266.0
+offset_right = -82.0
+offset_bottom = -243.0
+text = "Defended"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="GameController/EnemyCharacter" unique_id=1635381212]
+position = Vector2(2, -42)
+sprite_frames = SubResource("SpriteFrames_knlnu")
+autoplay = "default"
+frame_progress = 0.66931325
+
+[node name="PlayerCharacter" type="CharacterBody2D" parent="GameController" unique_id=1183180771]
+position = Vector2(-258, 71)
+script = ExtResource("2_vpp55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameController/PlayerCharacter" unique_id=1623356871]
+position = Vector2(-1.9073486e-06, 0)
+shape = SubResource("CapsuleShape2D_pgfkp")
+
+[node name="HealthBar" type="ProgressBar" parent="GameController/PlayerCharacter" unique_id=627693175]
+offset_left = -93.0
+offset_top = -138.0
+offset_right = 87.0
+offset_bottom = -111.0
+theme_override_styles/background = SubResource("StyleBoxFlat_knlnu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rq1h3")
+max_value = 30.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="AtkPwr" type="Label" parent="GameController/PlayerCharacter" unique_id=2059287125]
+offset_left = -200.0
+offset_top = -176.0
+offset_right = -93.0
+offset_bottom = -153.0
+text = "Attack Power:"
+
+[node name="Defense" type="Label" parent="GameController/PlayerCharacter" unique_id=849574447]
+offset_left = -45.0
+offset_top = -176.0
+offset_right = 89.0
+offset_bottom = -153.0
+text = "Defensive Power:"
+
+[node name="LastAction" type="Label" parent="GameController/PlayerCharacter" unique_id=972590589]
+offset_left = -122.0
+offset_top = -266.0
+offset_right = -82.0
+offset_bottom = -243.0
+text = "Attacked"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="GameController/PlayerCharacter" unique_id=1907911423]
+position = Vector2(5, -43)
+sprite_frames = SubResource("SpriteFrames_rq1h3")
+autoplay = "default"
+frame_progress = 0.9494649
+
+[node name="GameResult" type="Label" parent="GameController" unique_id=1373028629]
+top_level = true
+offset_left = -333.0
+offset_top = -171.0
+offset_right = 241.0
+offset_bottom = 7.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.59607846)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 130
+text = "YOU WIN"
+horizontal_alignment = 1
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1136283972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=2105703388]
+position = Vector2(4.5, 118.5)
+shape = SubResource("RectangleShape2D_pgfkp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=169758917]
+position = Vector2(0, 277.99997)
+scale = Vector2(604, -185.5)
+texture = SubResource("NoiseTexture2D_mfu4w")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=427463274]
+position = Vector2(5, -1)
+
+[node name="ControlsLabel" type="Label" parent="Camera2D" unique_id=1921322170]
+offset_left = -560.0
+offset_top = 163.0
+offset_right = -121.0
+offset_bottom = 308.0
+text = "Controls:
+X to attack (Attacks do more damage the less defense you have)
+Z to heal (Damage is related to health)
+C to defend (Defense is a hidden readiness associated with health)"
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." unique_id=141031057 instance=ExtResource("7_ga4n8")]
+visible = false

@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://bs5d4yj0auhap"]
+
+[ext_resource type="Script" uid="uid://bxpjtcfnarwbr" path="res://games/nutty-business/scripts/SceneTransition.cs" id="1_owpp6"]
+[ext_resource type="Texture2D" uid="uid://dm17p5xncio56" path="res://games/nutty-business/assets/sprites/menu.png" id="2_sxins"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5xqnf"]
+texture = ExtResource("2_sxins")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ema3p"]
+bg_color = Color(0.78039217, 0.6117647, 0.38431373, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uepa"]
+bg_color = Color(0.3200383, 0.23484495, 0.11342432, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121303566, 0.053245842, 0.014837056, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_una4e"]
+bg_color = Color(0.43621716, 0.32557303, 0.16828501, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.24225935, 0.13020945, 0.05366201, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oygij"]
+bg_color = Color(0.42, 0.38276, 0.34019998, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12225222, 0.12225226, 0.122252144, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7pjq"]
+bg_color = Color(0.42, 0.38276, 0.34019998, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12225222, 0.12225226, 0.122252144, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=343454867 node_paths=PackedStringArray("_fade", "_menu", "_nextButton", "_finalText")]
+script = ExtResource("1_owpp6")
+_fade = NodePath("ColorRect")
+_menu = NodePath("LevelSelect")
+_nextButton = NodePath("LevelSelect/Button")
+_finalText = NodePath("LevelSelect/Label2")
+
+[node name="LevelSelect" type="Control" parent="." unique_id=2053422066]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="Panel" type="Panel" parent="LevelSelect" unique_id=167398136]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5xqnf")
+
+[node name="Button2" type="Button" parent="LevelSelect" unique_id=1290305869]
+layout_mode = 0
+offset_left = -98.5
+offset_top = -70.5
+offset_right = -66.5
+offset_bottom = -39.499985
+offset_transform_enabled = true
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ema3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8uepa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_una4e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_oygij")
+text = "1"
+
+[node name="Button3" type="Button" parent="LevelSelect" unique_id=1463466030]
+layout_mode = 0
+offset_left = -56.5
+offset_top = -70.5
+offset_right = -24.5
+offset_bottom = -39.499985
+offset_transform_enabled = true
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ema3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8uepa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_una4e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
+disabled = true
+text = "2"
+
+[node name="Button10" type="Button" parent="LevelSelect" unique_id=100634526]
+layout_mode = 0
+offset_left = -14.5
+offset_top = -70.5
+offset_right = 17.5
+offset_bottom = -39.499985
+offset_transform_enabled = true
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ema3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8uepa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_una4e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
+disabled = true
+text = "3"
+
+[node name="Button11" type="Button" parent="LevelSelect" unique_id=910547264]
+layout_mode = 0
+offset_left = 26.5
+offset_top = -70.5
+offset_right = 58.5
+offset_bottom = -39.499985
+offset_transform_enabled = true
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ema3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8uepa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_una4e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
+disabled = true
+text = "4"
+
+[node name="Button12" type="Button" parent="LevelSelect" unique_id=534813241]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -70.5
+offset_right = 98.0
+offset_bottom = -39.499985
+offset_transform_enabled = true
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ema3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8uepa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_una4e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
+disabled = true
+text = "5"
+
+[node name="Label" type="Label" parent="LevelSelect" unique_id=1094079162]
+layout_mode = 0
+offset_left = -74.5
+offset_top = -15.0
+offset_right = 75.5
+offset_bottom = 8.0
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/outline_size = 4
+text = "Mission Complete!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="LevelSelect" unique_id=153897720]
+layout_mode = 0
+offset_left = -73.0
+offset_top = 38.00001
+offset_right = 77.0
+offset_bottom = 69.00003
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ema3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8uepa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_una4e")
+text = "Next Level"
+
+[node name="Label2" type="Label" parent="LevelSelect" unique_id=894715222]
+visible = false
+layout_mode = 0
+offset_left = -148.0
+offset_top = -8.0
+offset_right = 153.0
+offset_bottom = 119.0
+theme_override_colors/font_outline_color = Color(0.2901961, 0.15686275, 0.07058824, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 14
+text = "Congratulations! 
+All levels Completed!
+The acorns are stored, the tree is stocked, 
+and winter can come whenever it likes."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1774446255]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="LevelSelect/Button2" to="." method="OnNewLevelPressed" binds= [1]]
+[connection signal="pressed" from="LevelSelect/Button3" to="." method="OnNewLevelPressed" binds= [2]]
+[connection signal="pressed" from="LevelSelect/Button10" to="." method="OnNewLevelPressed" binds= [3]]
+[connection signal="pressed" from="LevelSelect/Button11" to="." method="OnNewLevelPressed" binds= [4]]
+[connection signal="pressed" from="LevelSelect/Button12" to="." method="OnNewLevelPressed" binds= [5]]
+[connection signal="pressed" from="LevelSelect/Button" to="." method="OnNextLevelPressed"]

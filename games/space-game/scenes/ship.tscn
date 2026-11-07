@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://00ktt1qpks1b"]
+
+[ext_resource type="Script" uid="uid://bw0barueqr48r" path="res://games/space-game/scripts/ship.gd" id="1_2gnfn"]
+[ext_resource type="Texture2D" uid="uid://dvqwxpvao5fmd" path="res://games/space-game/textures/spaceship.png" id="1_q631a"]
+[ext_resource type="AudioStream" uid="uid://co8umtkclnuhp" path="res://games/space-game/Music/laserGun.wav" id="3_4tobq"]
+
+[node name="Ship" type="Node2D"]
+visible = false
+script = ExtResource("1_2gnfn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
+scale = Vector2(0.018999998, 0.018999998)
+texture = ExtResource("1_q631a")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="LaserGunAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4tobq")
+
+[connection signal="timeout" from="CooldownTimer" to="." method="on_cooldown"]

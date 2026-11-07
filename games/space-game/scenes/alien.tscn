@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg23djb0l18tg"]
+
+[ext_resource type="Texture2D" uid="uid://swxebmnbap27" path="res://games/space-game/textures/ufo_alien.png" id="1_h100l"]
+[ext_resource type="Script" uid="uid://vh2wdn4047wh" path="res://games/space-game/scripts/alien.gd" id="1_u8rjw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h100l"]
+radius = 22.022715
+
+[node name="Alien" type="Node2D"]
+script = ExtResource("1_u8rjw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
+scale = Vector2(0.025000002, 0.025000004)
+texture = ExtResource("1_h100l")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_h100l")
+
+[node name="DespawnTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="area_entered" from="Area2D" to="." method="hit"]

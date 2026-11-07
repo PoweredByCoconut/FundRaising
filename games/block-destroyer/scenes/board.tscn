@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cykeet3jk270h"]
+
+[ext_resource type="Script" uid="uid://0oima76v6mlg" path="res://games/block-destroyer/scripts/board.gd" id="1_bw3vb"]
+[ext_resource type="Texture2D" uid="uid://pvy4nu64kvc7" path="res://games/block-destroyer/assets/image.jpg" id="2_tx6nw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upxrw"]
+size = Vector2(15, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_id3w2"]
+size = Vector2(100, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx6nw"]
+size = Vector2(15, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deahs"]
+size = Vector2(84, 20)
+
+[node name="board" type="StaticBody2D" unique_id=1374996621]
+script = ExtResource("1_bw3vb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=447479640]
+position = Vector2(-50, -95)
+shape = SubResource("RectangleShape2D_upxrw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=46073633]
+position = Vector2(-2, -182)
+shape = SubResource("RectangleShape2D_id3w2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=540609387]
+position = Vector2(50, -95)
+shape = SubResource("RectangleShape2D_tx6nw")
+
+[node name="Deathbox" type="Area2D" parent="." unique_id=1962107323]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathbox" unique_id=1266476589]
+position = Vector2(0, -27)
+shape = SubResource("RectangleShape2D_deahs")
+debug_color = Color(0.9916622, 0, 0.2686876, 0.41960785)
+
+[node name="Image" type="Sprite2D" parent="Deathbox" unique_id=579962123]
+z_index = -1
+position = Vector2(-1, -99)
+scale = Vector2(0.09782693, 0.27358943)
+texture = ExtResource("2_tx6nw")
+
+[connection signal="body_entered" from="Deathbox" to="." method="_on_deathbox_body_entered"]

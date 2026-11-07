@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ycrrve8fsttx"]
+
+[ext_resource type="Script" uid="uid://dd74og0uy37i7" path="res://games/space-game/scenes/survival_timer.gd" id="1_geaa0"]
+
+[node name="Timer" type="Timer"]
+autostart = true
+script = ExtResource("1_geaa0")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
