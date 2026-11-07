@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwwgehgyly8fu"
-path="res://.godot/imported/Run.png-47c54c70683db23cfe92e59932ac1040.ctex"
+uid="uid://cf5v36mjddtu2"
+path="res://.godot/imported/Hurt.png-6adeac83c8bfbebd30f365a1c6b88ba7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fighter/Run.png"
-dest_files=["res://.godot/imported/Run.png-47c54c70683db23cfe92e59932ac1040.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Fighter/Hurt.png"
+dest_files=["res://.godot/imported/Hurt.png-6adeac83c8bfbebd30f365a1c6b88ba7.ctex"]
 
 [params]
 

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bckhwgj31dkcj"]
 
-[ext_resource type="Script" uid="uid://br8gulvvqoyfe" path="res://Scripts/FightGuys/FightGuys.cs" id="1_n1bhq"]
-[ext_resource type="Script" uid="uid://bmxhssurb5kun" path="res://Scripts/FightGuys/GameController.cs" id="2_htruo"]
-[ext_resource type="Script" uid="uid://1203e81y4acm" path="res://Scripts/FightGuys/PlayerCharacter.cs" id="2_vpp55"]
-[ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
-[ext_resource type="Texture2D" uid="uid://dauj427s5bf1b" path="res://assets/sprites/Shinobi/Idle.png" id="4_2dluk"]
-[ext_resource type="Texture2D" uid="uid://cthkk2k243jbi" path="res://assets/sprites/Fighter/Idle.png" id="6_vbfl8"]
+[ext_resource type="Script" uid="uid://br8gulvvqoyfe" path="res://games/fight-guys/Scripts/FightGuys/FightGuys.cs" id="1_n1bhq"]
+[ext_resource type="Script" uid="uid://bmxhssurb5kun" path="res://games/fight-guys/Scripts/FightGuys/GameController.cs" id="2_htruo"]
+[ext_resource type="Script" uid="uid://1203e81y4acm" path="res://games/fight-guys/Scripts/FightGuys/PlayerCharacter.cs" id="2_vpp55"]
+[ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://games/fight-guys/Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
+[ext_resource type="Texture2D" uid="uid://dauj427s5bf1b" path="res://games/fight-guys/assets/sprites/Shinobi/Idle.png" id="4_2dluk"]
+[ext_resource type="Texture2D" uid="uid://cthkk2k243jbi" path="res://games/fight-guys/assets/sprites/Fighter/Idle.png" id="6_vbfl8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgfkp"]
 radius = 24.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr0eflimyvwqs"
-path="res://.godot/imported/Attack_3.png-36d8b63248b4f7f0f8ed3c0375ee5d44.ctex"
+uid="uid://cnfj6fdsk8b00"
+path="res://.godot/imported/Dead.png-5d3c16c9456eaf7163637f653f3d8c5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fighter/Attack_3.png"
-dest_files=["res://.godot/imported/Attack_3.png-36d8b63248b4f7f0f8ed3c0375ee5d44.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Shinobi/Dead.png"
+dest_files=["res://.godot/imported/Dead.png-5d3c16c9456eaf7163637f653f3d8c5a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3icxel38h0j8"
-path="res://.godot/imported/Jump.png-20019005f89dbc192a86332959c9e9d7.ctex"
+uid="uid://deyx3mjcwxqyu"
+path="res://.godot/imported/Run.png-ea75dc4859e3485c665e00fa4dc5c992.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Shinobi/Jump.png"
-dest_files=["res://.godot/imported/Jump.png-20019005f89dbc192a86332959c9e9d7.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Shinobi/Run.png"
+dest_files=["res://.godot/imported/Run.png-ea75dc4859e3485c665e00fa4dc5c992.ctex"]
 
 [params]
 

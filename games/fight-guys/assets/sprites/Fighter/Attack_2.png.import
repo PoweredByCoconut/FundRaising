@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1hvi37s1xbai"
-path="res://.godot/imported/Attack_1.png-9f5552c94092ae6fec474d0ed57b384c.ctex"
+uid="uid://bx7gmto8qry8r"
+path="res://.godot/imported/Attack_2.png-e1acf2e900f1c198fa193db4a75d6f96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fighter/Attack_1.png"
-dest_files=["res://.godot/imported/Attack_1.png-9f5552c94092ae6fec474d0ed57b384c.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Fighter/Attack_2.png"
+dest_files=["res://.godot/imported/Attack_2.png-e1acf2e900f1c198fa193db4a75d6f96.ctex"]
 
 [params]
 

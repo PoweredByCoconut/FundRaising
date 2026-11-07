@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crd30dh00lhxp"
-path="res://.godot/imported/Attack_2.png-f6a0759c3726fe8691937b2a331594af.ctex"
+uid="uid://ct2n1y6fdbbln"
+path="res://.godot/imported/Shield.png-933639a29d503af2acb462ed984097cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Shinobi/Attack_2.png"
-dest_files=["res://.godot/imported/Attack_2.png-f6a0759c3726fe8691937b2a331594af.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Shinobi/Shield.png"
+dest_files=["res://.godot/imported/Shield.png-933639a29d503af2acb462ed984097cf.ctex"]
 
 [params]
 

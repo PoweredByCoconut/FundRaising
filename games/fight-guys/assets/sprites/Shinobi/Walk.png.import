@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m80mbwlo04x5"
-path="res://.godot/imported/Shield.png-648e5fdaa0357dcbf7c955c973ce91c3.ctex"
+uid="uid://r7u64qlissd6"
+path="res://.godot/imported/Walk.png-baffc1402522e81e4a7dd38fac29dcd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fighter/Shield.png"
-dest_files=["res://.godot/imported/Shield.png-648e5fdaa0357dcbf7c955c973ce91c3.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Shinobi/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-baffc1402522e81e4a7dd38fac29dcd9.ctex"]
 
 [params]
 

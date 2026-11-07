@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx7gmto8qry8r"
-path="res://.godot/imported/Attack_2.png-00d16f379f32a322440ad134e51d5622.ctex"
+uid="uid://0qhxh7nv0dk6"
+path="res://.godot/imported/Walk.png-6bbb530167621b94832423af9a1c2335.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fighter/Attack_2.png"
-dest_files=["res://.godot/imported/Attack_2.png-00d16f379f32a322440ad134e51d5622.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Fighter/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-6bbb530167621b94832423af9a1c2335.ctex"]
 
 [params]
 

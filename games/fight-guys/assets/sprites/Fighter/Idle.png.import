@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dauj427s5bf1b"
-path="res://.godot/imported/Idle.png-e9681e4c445bedfda0aafed5ff21a693.ctex"
+uid="uid://cthkk2k243jbi"
+path="res://.godot/imported/Idle.png-f2d775f44742c3fc6b211dce8b2f3fad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Shinobi/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-e9681e4c445bedfda0aafed5ff21a693.ctex"]
+source_file="res://games/fight-guys/assets/sprites/Fighter/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-f2d775f44742c3fc6b211dce8b2f3fad.ctex"]
 
 [params]
 
