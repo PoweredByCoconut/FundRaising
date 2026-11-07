@@ -73,7 +73,7 @@ public partial class Player : CharacterBody2D
 		}
 
         // Handle Jump.
-        if (Input.IsActionJustPressed("ui_accept"))
+        if (Input.IsActionJustPressed("spacebar"))
         {
             _jumpBufferTimer = _jumpBufferTime;
         }
@@ -90,7 +90,7 @@ public partial class Player : CharacterBody2D
         }
 
         // Movement
-        float direction = Input.GetAxis("ui_left", "ui_right");
+        float direction = Input.GetAxis("left", "right");
 
         if (direction != 0)
 		{
