@@ -53,6 +53,13 @@ position = Vector2(4.781807, -215.56006)
 scale = Vector2(2.1589646, 2.12)
 texture = ExtResource("3_582at")
 
+[node name="ColorRect" type="ColorRect" parent="3" unique_id=1781146118]
+offset_left = -3889.7266
+offset_top = 99.320786
+offset_right = 3899.1924
+offset_bottom = 4519.1323
+color = Color(0.41568628, 0.46666667, 0.29411766, 1)
+
 [node name="TTree13" type="Sprite2D" parent="." unique_id=1514518205]
 position = Vector2(235, -171)
 texture = ExtResource("5_xdo4p")

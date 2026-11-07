@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl0icvj6li2ks"
-path="res://.godot/imported/Exlamation.png-d60f7e6a1c01bbc9bcbfed932b77c8f5.ctex"
+uid="uid://dmjyc4eaytqb6"
+path="res://.godot/imported/log_0.png-41337effabf1df47daba1b303a0b641a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nutty-business/assets/sprites/Exlamation.png"
-dest_files=["res://.godot/imported/Exlamation.png-d60f7e6a1c01bbc9bcbfed932b77c8f5.ctex"]
+source_file="res://nutty-business/assets/sprites/log_0.png"
+dest_files=["res://.godot/imported/log_0.png-41337effabf1df47daba1b303a0b641a.ctex"]
 
 [params]
 

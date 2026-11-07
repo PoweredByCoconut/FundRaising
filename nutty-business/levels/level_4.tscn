@@ -3169,7 +3169,7 @@ layer_0/tile_data = PackedInt32Array(4, 131073, 0, 5, 196609, 0, 6, 262145, 0, 7
 
 [node name="SignPost" parent="Scene/Layer1" unique_id=148457366 instance=ExtResource("14_27cb5")]
 position = Vector2(98, -35)
-_displayText = "A dry squirrel is a happy squirrel."
+_displayText = "Sometimes you just need a lift."
 
 [node name="LillyPad" parent="Scene/Layer1" unique_id=472107049 instance=ExtResource("18_28mkh")]
 z_index = -1
@@ -3217,7 +3217,6 @@ FarBank = NodePath("../Scene/Layer1/LillyPad5/Marker2D")
 LilyPads = [NodePath("../Scene/Layer1/LillyPad2/Marker2D"), NodePath("../Scene/Layer1/LillyPad4/Marker2D")]
 HopDuration = 0.38
 HopHeight = 55.0
-HopPauseDuration = 0.3
 DismountDelay = 0.8
 
 [connection signal="body_entered" from="Scene/Layer1/Root/Area2D" to="Scene/Layer1/Root/Area2D" method="_on_body_entered"]

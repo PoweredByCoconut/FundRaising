@@ -33,9 +33,9 @@ public partial class GameManager : Node
         _canvas = GetNode<SceneTransition>("/root/Game/CanvasLayer");
         if (CurrentLevel == HighestUnlockedLevel && !lastLevel) {
             HighestUnlockedLevel++;
-            _canvas.UnlockLevel(HighestUnlockedLevel);
             GD.Print("Unlocked level " + HighestUnlockedLevel);
         }
+        _canvas.UnlockLevel(HighestUnlockedLevel);
         _canvas.ShowMenu(lastLevel);
     }
 }

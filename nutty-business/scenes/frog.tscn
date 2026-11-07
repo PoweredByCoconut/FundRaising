@@ -81,6 +81,7 @@ radius = 6.0
 [node name="Frog" type="AnimatableBody2D" unique_id=1083111912 node_paths=PackedStringArray("LilyPads", "HeadArea")]
 script = ExtResource("1_kmexs")
 LilyPads = [null]
+HopPauseDuration = 0.6
 HeadArea = NodePath("HeadArea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87999781]

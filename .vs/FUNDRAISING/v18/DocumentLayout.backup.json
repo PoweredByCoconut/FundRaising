@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\GameDev\\Godot\\FundRaising\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\catapult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\catapult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\respawntrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\respawntrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\pittrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\pittrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\teleporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\teleporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,31 +47,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Catapult.cs",
+              "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Catapult.cs",
+              "RelativeDocumentMoniker": "nutty-business\\scripts\\Catapult.cs",
+              "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Catapult.cs",
+              "RelativeToolTip": "nutty-business\\scripts\\Catapult.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAawLwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T06:01:08.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PitTrap.cs",
+              "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\PitTrap.cs",
+              "RelativeDocumentMoniker": "nutty-business\\scripts\\PitTrap.cs",
+              "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\PitTrap.cs",
+              "RelativeToolTip": "nutty-business\\scripts\\PitTrap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T05:51:23.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RespawnTrigger.cs",
+              "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\RespawnTrigger.cs",
+              "RelativeDocumentMoniker": "nutty-business\\scripts\\RespawnTrigger.cs",
+              "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\RespawnTrigger.cs",
+              "RelativeToolTip": "nutty-business\\scripts\\RespawnTrigger.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwCsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T05:34:21.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Teleporter.cs",
+              "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Teleporter.cs",
+              "RelativeDocumentMoniker": "nutty-business\\scripts\\Teleporter.cs",
+              "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Teleporter.cs",
+              "RelativeToolTip": "nutty-business\\scripts\\Teleporter.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAADwv1EAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T05:21:32.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Frog.cs",
               "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Frog.cs",
               "RelativeDocumentMoniker": "nutty-business\\scripts\\Frog.cs",
               "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Frog.cs",
               "RelativeToolTip": "nutty-business\\scripts\\Frog.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAuwJUAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T01:21:54.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "nutty-business\\scripts\\GameManager.cs",
               "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\GameManager.cs",
               "RelativeToolTip": "nutty-business\\scripts\\GameManager.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA1wB0AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T00:02:36.545Z"
+              "WhenOpened": "2026-11-07T00:02:36.545Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "SceneTransition.cs",
               "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\SceneTransition.cs",
               "RelativeDocumentMoniker": "nutty-business\\scripts\\SceneTransition.cs",
@@ -75,7 +144,8 @@
               "RelativeToolTip": "nutty-business\\scripts\\Level.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T03:22:25.51Z"
+              "WhenOpened": "2026-11-06T03:22:25.51Z",
+              "EditorCaption": ""
             }
           ]
         }
