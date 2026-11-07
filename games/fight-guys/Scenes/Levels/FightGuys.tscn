@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bmntk4tqdm3cl" path="res://games/fight-guys/Scripts/FightGuys/EnemyCharacter.cs" id="3_vpp55"]
 [ext_resource type="Texture2D" uid="uid://dauj427s5bf1b" path="res://games/fight-guys/assets/sprites/Shinobi/Idle.png" id="4_2dluk"]
 [ext_resource type="Texture2D" uid="uid://cthkk2k243jbi" path="res://games/fight-guys/assets/sprites/Fighter/Idle.png" id="6_vbfl8"]
+[ext_resource type="PackedScene" uid="uid://dsdpjonyn3tgi" path="res://menu/PauseMenu.tscn" id="7_ga4n8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgfkp"]
 radius = 24.0
@@ -270,3 +271,6 @@ X to attack (Attacks do more damage the less defense you have)
 Z to heal (Damage is related to health)
 C to defend (Defense is a hidden readiness associated with health)"
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="." unique_id=141031057 instance=ExtResource("7_ga4n8")]
+visible = false
