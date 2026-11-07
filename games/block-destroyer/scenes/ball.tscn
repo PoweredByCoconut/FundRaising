@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dug7s2ewohq8i"]
 
-[ext_resource type="Script" uid="uid://ogty7q4jot6c" path="res://scripts/ball.gd" id="1_7s4qf"]
-[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://assets/spritesheet-breakout.png" id="2_cxlvu"]
+[ext_resource type="Script" uid="uid://ogty7q4jot6c" path="res://games/block-destroyer/scripts/ball.gd" id="1_7s4qf"]
+[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://games/block-destroyer/assets/spritesheet-breakout.png" id="2_cxlvu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_deahs"]
 radius = 12.0

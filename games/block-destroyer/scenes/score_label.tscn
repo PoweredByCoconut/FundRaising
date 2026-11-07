@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c7t0nv5y1er02"]
 
-[ext_resource type="FontFile" uid="uid://mpa4ud4pq4ok" path="res://assets/SkylinePixel - Community Pack/TTF/Skyline Pixel.ttf" id="1_1kqdx"]
+[ext_resource type="FontFile" uid="uid://mpa4ud4pq4ok" path="res://games/block-destroyer/assets/SkylinePixel - Community Pack/TTF/Skyline Pixel.ttf" id="1_1kqdx"]
 
 [node name="Score" type="Label" unique_id=1580166484]
 offset_left = 1.0

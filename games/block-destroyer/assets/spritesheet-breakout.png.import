@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0yxv25mj3ujj"
-path="res://.godot/imported/SkylinePixel-Regular.png-da98b026ae3f998ee6cf4ef930266b10.ctex"
+uid="uid://4m3yxhoqpewj"
+path="res://.godot/imported/spritesheet-breakout.png-af191b2d6a35ef387ad55c567e2be5af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SkylinePixel - Community Pack/PNG/SkylinePixel-Regular.png"
-dest_files=["res://.godot/imported/SkylinePixel-Regular.png-da98b026ae3f998ee6cf4ef930266b10.ctex"]
+source_file="res://games/block-destroyer/assets/spritesheet-breakout.png"
+dest_files=["res://.godot/imported/spritesheet-breakout.png-af191b2d6a35ef387ad55c567e2be5af.ctex"]
 
 [params]
 

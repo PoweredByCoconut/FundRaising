@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dnhd4423jm257"]
 
-[ext_resource type="PackedScene" uid="uid://dgfoykrb1euv0" path="res://scenes/paddle.tscn" id="1_nnsk1"]
-[ext_resource type="Script" uid="uid://b783704ba1q1w" path="res://scripts/world.gd" id="1_qfnet"]
-[ext_resource type="Texture2D" uid="uid://dlfeu50jl4b5k" path="res://assets/ball_life.tres" id="2_qfnet"]
-[ext_resource type="PackedScene" uid="uid://cykeet3jk270h" path="res://scenes/board.tscn" id="2_rwgxs"]
-[ext_resource type="PackedScene" uid="uid://dug7s2ewohq8i" path="res://scenes/ball.tscn" id="3_ball"]
-[ext_resource type="PackedScene" uid="uid://c7t0nv5y1er02" path="res://scenes/score_label.tscn" id="4_k0juu"]
-[ext_resource type="PackedScene" uid="uid://bcitmmkh0h4d5" path="res://scenes/game_over_screen.tscn" id="7_i7141"]
+[ext_resource type="PackedScene" uid="uid://dgfoykrb1euv0" path="res://games/block-destroyer/scenes/paddle.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://b783704ba1q1w" path="res://games/block-destroyer/scripts/world.gd" id="1_qfnet"]
+[ext_resource type="Texture2D" uid="uid://dlfeu50jl4b5k" path="res://games/block-destroyer/assets/ball_life.tres" id="2_qfnet"]
+[ext_resource type="PackedScene" uid="uid://cykeet3jk270h" path="res://games/block-destroyer/scenes/board.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://dug7s2ewohq8i" path="res://games/block-destroyer/scenes/ball.tscn" id="3_ball"]
+[ext_resource type="PackedScene" uid="uid://c7t0nv5y1er02" path="res://games/block-destroyer/scenes/score_label.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://bcitmmkh0h4d5" path="res://games/block-destroyer/scenes/game_over_screen.tscn" id="7_i7141"]
 
 [node name="world" type="Node2D" unique_id=841373944]
 script = ExtResource("1_qfnet")

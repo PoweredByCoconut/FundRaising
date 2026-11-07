@@ -1,6 +1,6 @@
 [gd_resource type="AtlasTexture" format=3 uid="uid://dlfeu50jl4b5k"]
 
-[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://assets/spritesheet-breakout.png" id="1_jpibx"]
+[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://games/block-destroyer/assets/spritesheet-breakout.png" id="1_jpibx"]
 
 [resource]
 atlas = ExtResource("1_jpibx")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cale7jdopqvwu"
-path="res://.godot/imported/icon.svg-f8c8f2235e5fc26edc5e023ca0ae7ef8.ctex"
+uid="uid://c0yxv25mj3ujj"
+path="res://.godot/imported/SkylinePixel-Regular.png-4bc5ff477d5c6c9a3217f0f6a8552c2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://games/test-game/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-f8c8f2235e5fc26edc5e023ca0ae7ef8.ctex"]
+source_file="res://games/block-destroyer/assets/SkylinePixel - Community Pack/PNG/SkylinePixel-Regular.png"
+dest_files=["res://.godot/imported/SkylinePixel-Regular.png-4bc5ff477d5c6c9a3217f0f6a8552c2c.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cykeet3jk270h"]
 
-[ext_resource type="Script" uid="uid://0oima76v6mlg" path="res://scripts/board.gd" id="1_bw3vb"]
-[ext_resource type="Texture2D" uid="uid://pvy4nu64kvc7" path="res://assets/image.jpg" id="2_tx6nw"]
+[ext_resource type="Script" uid="uid://0oima76v6mlg" path="res://games/block-destroyer/scripts/board.gd" id="1_bw3vb"]
+[ext_resource type="Texture2D" uid="uid://pvy4nu64kvc7" path="res://games/block-destroyer/assets/image.jpg" id="2_tx6nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upxrw"]
 size = Vector2(15, 190)

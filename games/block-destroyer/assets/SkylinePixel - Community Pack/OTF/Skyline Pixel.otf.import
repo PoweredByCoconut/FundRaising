@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b44f8e04hm71k"
-path="res://.godot/imported/Skyline Pixel Soft-Stroke.otf-24828ffcc0ef846e80411ab59c8697b3.fontdata"
+uid="uid://bekxdc8rad66x"
+path="res://.godot/imported/Skyline Pixel.otf-1a6b329be632c346f519ac981c0331e4.fontdata"
 
 [deps]
 
-source_file="res://assets/SkylinePixel - Community Pack/OTF/Skyline Pixel Soft-Stroke.otf"
-dest_files=["res://.godot/imported/Skyline Pixel Soft-Stroke.otf-24828ffcc0ef846e80411ab59c8697b3.fontdata"]
+source_file="res://games/block-destroyer/assets/SkylinePixel - Community Pack/OTF/Skyline Pixel.otf"
+dest_files=["res://.godot/imported/Skyline Pixel.otf-1a6b329be632c346f519ac981c0331e4.fontdata"]
 
 [params]
 

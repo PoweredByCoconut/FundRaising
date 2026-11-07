@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcitmmkh0h4d5"]
 
-[ext_resource type="FontFile" uid="uid://ngcqhebk4opq" path="res://assets/SkylinePixel - Community Pack/TTF/Skyline Pixel Stroke.ttf" id="1_wojlb"]
+[ext_resource type="FontFile" uid="uid://ngcqhebk4opq" path="res://games/block-destroyer/assets/SkylinePixel - Community Pack/TTF/Skyline Pixel Stroke.ttf" id="1_wojlb"]
 
 [node name="GameOverScreen" type="Control" unique_id=333678961]
 layout_mode = 3

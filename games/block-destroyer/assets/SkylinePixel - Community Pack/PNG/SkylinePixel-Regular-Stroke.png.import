@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj6i71kq2j21v"
-path="res://.godot/imported/SkylinePixel-Regular-Stroke.png-b8bfeccee31b13d95b08a16a17499eed.ctex"
+path="res://.godot/imported/SkylinePixel-Regular-Stroke.png-e9164dc2da59401a8254580ae84956ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SkylinePixel - Community Pack/PNG/SkylinePixel-Regular-Stroke.png"
-dest_files=["res://.godot/imported/SkylinePixel-Regular-Stroke.png-b8bfeccee31b13d95b08a16a17499eed.ctex"]
+source_file="res://games/block-destroyer/assets/SkylinePixel - Community Pack/PNG/SkylinePixel-Regular-Stroke.png"
+dest_files=["res://.godot/imported/SkylinePixel-Regular-Stroke.png-e9164dc2da59401a8254580ae84956ca.ctex"]
 
 [params]
 

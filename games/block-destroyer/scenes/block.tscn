@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgs678oo0xy11"]
 
-[ext_resource type="Script" uid="uid://bmawbbi734bwi" path="res://scripts/block.gd" id="1_8r6n6"]
-[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://assets/spritesheet-breakout.png" id="2_cgrg5"]
+[ext_resource type="Script" uid="uid://bmawbbi734bwi" path="res://games/block-destroyer/scripts/block.gd" id="1_8r6n6"]
+[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://games/block-destroyer/assets/spritesheet-breakout.png" id="2_cgrg5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kun4"]
 atlas = ExtResource("2_cgrg5")

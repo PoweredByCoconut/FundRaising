@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgfoykrb1euv0"]
 
-[ext_resource type="Script" uid="uid://ckoknp5vi6ikt" path="res://scripts/paddle.gd" id="1_3xiby"]
-[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://assets/spritesheet-breakout.png" id="2_y7wee"]
+[ext_resource type="Script" uid="uid://ckoknp5vi6ikt" path="res://games/block-destroyer/scripts/paddle.gd" id="1_3xiby"]
+[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://games/block-destroyer/assets/spritesheet-breakout.png" id="2_y7wee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upxrw"]
 size = Vector2(114, 10)

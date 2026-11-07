@@ -2,7 +2,7 @@ extends Node2D
 
 
 # At the top with your other variables
-const BLOCK_SCENE = preload("res://scenes/block.tscn")  # ← change path if needed
+const BLOCK_SCENE = preload("res://games/block-destroyer/scenes/block.tscn")  # ← change path if needed
 
 # Easy to tweak
 @export var rows: int = 6
