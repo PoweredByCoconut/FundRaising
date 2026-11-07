@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://b4hhdj485mp7w"]
+
+[ext_resource type="Texture2D" uid="uid://0j4sarjt33oy" path="res://games/nutty-business/assets/sprites/frog/Sprites/idle/frog-idle-1.png" id="1_40ckj"]
+[ext_resource type="Script" uid="uid://byqvpm7jao158" path="res://games/nutty-business/scripts/Frog.cs" id="1_kmexs"]
+[ext_resource type="Texture2D" uid="uid://cg00fdnkk7nnf" path="res://games/nutty-business/assets/sprites/frog/Sprites/idle/frog-idle-2.png" id="2_kmexs"]
+[ext_resource type="Texture2D" uid="uid://c2vilpvrwsjgn" path="res://games/nutty-business/assets/sprites/frog/Sprites/idle/frog-idle-3.png" id="3_br45r"]
+[ext_resource type="Texture2D" uid="uid://c4dtapu10rwwq" path="res://games/nutty-business/assets/sprites/frog/Sprites/idle/frog-idle-4.png" id="4_j1fuw"]
+[ext_resource type="Texture2D" uid="uid://dy2e0bwdoqwm6" path="res://games/nutty-business/assets/sprites/frog/Sprites/idle/frog-idle-5.png" id="5_7ra23"]
+[ext_resource type="Texture2D" uid="uid://b430bb5pcm854" path="res://games/nutty-business/assets/sprites/frog/Sprites/jump/frog-jump-2.png" id="6_f72gb"]
+[ext_resource type="Texture2D" uid="uid://dairrqu1a0yd1" path="res://games/nutty-business/assets/sprites/frog/Sprites/jump/frog-jump-1.png" id="7_fc87d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oygij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kmexs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_br45r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j1fuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7ra23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7ra23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_40ckj")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_f72gb")
+}],
+"loop": 0,
+"name": &"jump_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fc87d")
+}],
+"loop": 0,
+"name": &"jump_up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spi88"]
+size = Vector2(16, 12.88)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8y1dn"]
+radius = 6.0
+
+[node name="Frog" type="AnimatableBody2D" unique_id=1083111912 node_paths=PackedStringArray("LilyPads", "HeadArea")]
+script = ExtResource("1_kmexs")
+LilyPads = [null]
+HeadArea = NodePath("HeadArea")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87999781]
+position = Vector2(0.5, -11)
+sprite_frames = SubResource("SpriteFrames_oygij")
+animation = &"jump_up"
+
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=1117769395]
+position = Vector2(-0.5, -6.56)
+shape = SubResource("RectangleShape2D_spi88")
+
+[node name="HeadArea" type="Area2D" parent="." unique_id=1051373774]
+position = Vector2(0.5, -11)
+
+[node name="HeadTrigger" type="CollisionShape2D" parent="HeadArea" unique_id=575648984]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_8y1dn")

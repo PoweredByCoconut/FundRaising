@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dlfeu50jl4b5k" path="res://games/block-destroyer/assets/ball_life.tres" id="3_kh61s"]
 [ext_resource type="Script" uid="uid://565a4bnys0u0" path="res://menu/Menu.cs" id="3_rbtx8"]
 [ext_resource type="Texture2D" uid="uid://d1hvi37s1xbai" path="res://games/fight-guys/assets/sprites/Fighter/Attack_1.png" id="3_wn5o1"]
+[ext_resource type="Texture2D" uid="uid://ho46hattw548" path="res://games/nutty-business/assets/sprites/acorn.png" id="4_wn5o1"]
 
 [sub_resource type="Gradient" id="Gradient_0gkbj"]
 colors = PackedColorArray(0, 0.36862746, 0.83137256, 1, 0.77254903, 1, 1, 1)
@@ -16,6 +17,10 @@ fill_to = Vector2(0, 1)
 [sub_resource type="AtlasTexture" id="AtlasTexture_umdtr"]
 atlas = ExtResource("3_wn5o1")
 region = Rect2(295, 46, 53, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioqbr"]
+atlas = ExtResource("4_wn5o1")
+region = Rect2(4, 2, 17, 21)
 
 [node name="MainMenu" type="Control" unique_id=1773348674]
 layout_mode = 3
@@ -106,7 +111,29 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 texture_normal = ExtResource("3_kh61s")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 5
+
+[node name="NuttyBusiness" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1150002823]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/NuttyBusiness" unique_id=1672429888]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Nutty Business"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer/NuttyBusiness" unique_id=929430591]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = SubResource("AtlasTexture_ioqbr")
+ignore_texture_size = true
+stretch_mode = 5
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/FightGuys/TextureButton" to="." method="LoadFightGuys"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/BlockDestroyer/TextureButton" to="." method="LoadBlockDestoyer"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/NuttyBusiness/TextureButton" to="." method="LoadNuttyBusiness"]

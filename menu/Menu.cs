@@ -11,4 +11,9 @@ public partial class Menu : Node
 	{
 		GetTree().ChangeSceneToFile("res://games/block-destroyer/scenes/root.tscn");
 	}
+
+	public void LoadNuttyBusiness()
+	{
+		GetTree().ChangeSceneToFile("res://games/nutty-business/levels/level_1.tscn");
+	}
 }

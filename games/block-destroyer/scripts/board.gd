@@ -8,7 +8,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-func _on_deathbox_body_entered(body: Node2D) -> void:
+func _on_deathbox_body_entered(_body: Node2D) -> void:
 	print("deathbox entered")
 	ball.launched = false
 	world._on_death()

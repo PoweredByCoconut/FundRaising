@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var SPEED = 300.0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	velocity.x = direction * SPEED
 	velocity.y = 0

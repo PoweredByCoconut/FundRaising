@@ -45,10 +45,17 @@ theme_override_font_sizes/font_size = 100
 text = "Game Paused"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1605010320]
+[node name="BackToGame" type="Button" parent="VBoxContainer" unique_id=2132738643]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 64
+text = "Back To Game"
+
+[node name="ReturnToMenu" type="Button" parent="VBoxContainer" unique_id=1605010320]
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 64
 text = "Return To Menu"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="GoToMenu"]
+[connection signal="pressed" from="VBoxContainer/BackToGame" to="." method="BackToGame"]
+[connection signal="pressed" from="VBoxContainer/ReturnToMenu" to="." method="GoToMenu"]
