@@ -6,7 +6,7 @@ public partial class GameManager : Node
 
     public int HighestUnlockedLevel = 1;
 
-    public int MaxUnlockedLevel = 12;
+    public int MaxUnlockedLevel = 5;
 
     private SceneTransition _canvas;
 

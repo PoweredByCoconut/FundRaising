@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\GameDev\\Godot\\FundRaising\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:nutty-business\\scripts\\Frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "nutty-business\\scripts\\Frog.cs",
               "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Frog.cs",
               "RelativeToolTip": "nutty-business\\scripts\\Frog.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAuwJUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T01:21:54.172Z",
               "EditorCaption": ""
