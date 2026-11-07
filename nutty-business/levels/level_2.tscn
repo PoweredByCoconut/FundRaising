@@ -15,9 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://bptdtskun4jfb" path="res://nutty-business/scenes/sign_post.tscn" id="13_wgvos"]
 [ext_resource type="Script" uid="uid://bhm578jflf3gg" path="res://nutty-business/scripts/RespawnTrigger.cs" id="14_m4706"]
 [ext_resource type="Script" uid="uid://bu3mbyal73k10" path="res://nutty-business/scripts/PitTrap.cs" id="15_4xp61"]
+[ext_resource type="Texture2D" uid="uid://bf36ni3ak2r22" path="res://nutty-business/assets/sprites/environment/flowers/Bush 1 - Copy/Bush 1 - GREEN 2.png" id="16_4voae"]
 [ext_resource type="Texture2D" uid="uid://dcowyy3f4ssv3" path="res://nutty-business/assets/sprites/environment/Tall Grass.png" id="16_4yoxl"]
 [ext_resource type="PackedScene" uid="uid://tnxb670cuafk" path="res://nutty-business/scenes/rock.tscn" id="17_6dcgf"]
+[ext_resource type="Texture2D" uid="uid://cg22rq7ca1s3m" path="res://nutty-business/assets/sprites/environment/flowers/Bush 1 - Copy/Bush 1 - GREEN.png" id="17_us1uh"]
 [ext_resource type="PackedScene" uid="uid://bs5d4yj0auhap" path="res://nutty-business/scenes/canvas.tscn" id="18_ubuva"]
+[ext_resource type="Texture2D" uid="uid://radbg3jobbwm" path="res://nutty-business/assets/sprites/environment/flowers/Flower 10 - Copy/Flower 10 - PINK.png" id="19_oe0hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oygij"]
 size = Vector2(14.779423, 20)
@@ -1542,6 +1545,24 @@ position = Vector2(1, -16)
 shape = SubResource("RectangleShape2D_8y1dn")
 disabled = true
 
+[node name="Bush1Green2" type="Sprite2D" parent="Scene/Layer1" unique_id=2008239869]
+z_index = -2
+position = Vector2(-339, -25)
+scale = Vector2(2, 2)
+texture = ExtResource("16_4voae")
+
+[node name="Bush1Green3" type="Sprite2D" parent="Scene/Layer1" unique_id=1253096393]
+z_index = -2
+position = Vector2(-292, -20)
+scale = Vector2(2, 2)
+texture = ExtResource("16_4voae")
+
+[node name="Bush1Green" type="Sprite2D" parent="Scene/Layer1" unique_id=1363816989]
+z_index = -1
+position = Vector2(-123, -22)
+scale = Vector2(2, 2)
+texture = ExtResource("17_us1uh")
+
 [node name="Layer0" type="Node2D" parent="Scene" unique_id=326976353]
 z_index = 5
 
@@ -1552,6 +1573,10 @@ texture = ExtResource("16_4yoxl")
 [node name="TallGrass3" type="Sprite2D" parent="Scene/Layer0" unique_id=979454930]
 position = Vector2(-154, -15)
 texture = ExtResource("16_4yoxl")
+
+[node name="Flower10Pink" type="Sprite2D" parent="Scene" unique_id=1069370612]
+position = Vector2(445, -16)
+texture = ExtResource("19_oe0hl")
 
 [node name="Rock" parent="." unique_id=1288661613 instance=ExtResource("17_6dcgf")]
 position = Vector2(350, -3)

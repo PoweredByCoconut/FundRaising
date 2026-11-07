@@ -65,4 +65,12 @@ public partial class SceneTransition : CanvasLayer
     {
         ChangeScene(level);
     }
+
+    public void UnlockLevel(int levelNumber)
+    {
+        for (int i = 1; i <= levelNumber; i++)
+        {
+            _menu.GetChild<Button>(i, false).Disabled = false;
+        }
+    }
 }

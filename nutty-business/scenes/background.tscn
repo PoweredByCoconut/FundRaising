@@ -39,7 +39,7 @@ script = ExtResource("1_nji80")
 [node name="1" type="Sprite2D" parent="." unique_id=1715649641]
 z_index = -2
 position = Vector2(4.781807, -215.56006)
-scale = Vector2(2.1589646, 2.12)
+scale = Vector2(10.014266, 58.973366)
 texture = ExtResource("2_wx42w")
 
 [node name="GandalfHardcoreBackgroundLayersLayer3" type="Sprite2D" parent="." unique_id=725493357]
@@ -285,6 +285,66 @@ texture = ExtResource("29_tt5m4")
 z_index = -2
 position = Vector2(-294, -246)
 texture = ExtResource("27_o3wgv")
+
+[node name="Cloud3" type="Sprite2D" parent="." unique_id=366987614]
+z_index = -2
+position = Vector2(-264, -738)
+texture = ExtResource("26_xdo4p")
+
+[node name="Cloud14" type="Sprite2D" parent="." unique_id=331013261]
+z_index = -2
+position = Vector2(-670, -788)
+texture = ExtResource("27_o3wgv")
+
+[node name="Cloud15" type="Sprite2D" parent="." unique_id=1699605294]
+z_index = -2
+position = Vector2(84, -718)
+texture = ExtResource("28_0rcko")
+
+[node name="Cloud16" type="Sprite2D" parent="." unique_id=1058375222]
+z_index = -2
+position = Vector2(-731, -572)
+texture = ExtResource("29_tt5m4")
+
+[node name="Cloud17" type="Sprite2D" parent="." unique_id=896394218]
+z_index = -2
+position = Vector2(-207, -658)
+texture = ExtResource("27_o3wgv")
+
+[node name="Cloud18" type="Sprite2D" parent="." unique_id=1545584896]
+z_index = -2
+position = Vector2(272, -821)
+texture = ExtResource("28_0rcko")
+
+[node name="Cloud19" type="Sprite2D" parent="." unique_id=687880819]
+z_index = -2
+position = Vector2(353, -799)
+texture = ExtResource("26_xdo4p")
+
+[node name="Cloud20" type="Sprite2D" parent="." unique_id=396248164]
+z_index = -2
+position = Vector2(-433, -712)
+texture = ExtResource("27_o3wgv")
+
+[node name="Cloud21" type="Sprite2D" parent="." unique_id=1194602401]
+z_index = -2
+position = Vector2(30, -641)
+texture = ExtResource("28_0rcko")
+
+[node name="Cloud22" type="Sprite2D" parent="." unique_id=1485431188]
+z_index = -2
+position = Vector2(281, -587)
+texture = ExtResource("29_tt5m4")
+
+[node name="Cloud23" type="Sprite2D" parent="." unique_id=1586599000]
+z_index = -2
+position = Vector2(-520, -568)
+texture = ExtResource("27_o3wgv")
+
+[node name="Cloud24" type="Sprite2D" parent="." unique_id=1431579092]
+z_index = -2
+position = Vector2(-76, -809)
+texture = ExtResource("28_0rcko")
 
 [node name="Cloud8" type="Sprite2D" parent="." unique_id=764266988]
 z_index = -2

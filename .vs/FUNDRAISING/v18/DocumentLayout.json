@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\GameDev\\Godot\\FundRaising\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\frog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\scenetransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|solutionrelative:nutty-business\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1576082-DA2F-4639-AB98-400DCF34A9B1}|FundRaising.csproj|c:\\gamedev\\godot\\fundraising\\nutty-business\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,19 +31,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Frog.cs",
+              "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Frog.cs",
+              "RelativeDocumentMoniker": "nutty-business\\scripts\\Frog.cs",
+              "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Frog.cs",
+              "RelativeToolTip": "nutty-business\\scripts\\Frog.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAuwJUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T01:21:54.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "nutty-business\\scripts\\GameManager.cs",
+              "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\GameManager.cs",
+              "RelativeToolTip": "nutty-business\\scripts\\GameManager.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wB0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:02:36.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SceneTransition.cs",
               "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\SceneTransition.cs",
               "RelativeDocumentMoniker": "nutty-business\\scripts\\SceneTransition.cs",
               "ToolTip": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\SceneTransition.cs",
               "RelativeToolTip": "nutty-business\\scripts\\SceneTransition.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwB4AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwEYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T03:22:42.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T03:22:42.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Level.cs",
               "DocumentMoniker": "C:\\GameDev\\Godot\\FundRaising\\nutty-business\\scripts\\Level.cs",
               "RelativeDocumentMoniker": "nutty-business\\scripts\\Level.cs",
@@ -43,8 +75,7 @@
               "RelativeToolTip": "nutty-business\\scripts\\Level.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-06T03:22:25.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-06T03:22:25.51Z"
             }
           ]
         }

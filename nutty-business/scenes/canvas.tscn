@@ -114,12 +114,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_una4e")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_oygij")
 text = "1"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2" unique_id=1463466030]
+[node name="Button3" type="Button" parent="LevelSelect" unique_id=1463466030]
 layout_mode = 0
-offset_left = 35.5
-offset_top = -0.5
-offset_right = 67.5
-offset_bottom = 30.500015
+offset_left = -72.0
+offset_top = -82.5
+offset_right = -40.0
+offset_bottom = -51.499985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -132,11 +132,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "2"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button2" unique_id=100634526]
+[node name="Button10" type="Button" parent="LevelSelect" unique_id=100634526]
 layout_mode = 0
-offset_left = 36.0
-offset_right = 68.0
-offset_bottom = 31.000015
+offset_left = -36.0
+offset_top = -82.5
+offset_right = -4.0
+offset_bottom = -51.499985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -149,11 +150,11 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "3"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button2/Button2" unique_id=910547264]
+[node name="Button11" type="Button" parent="LevelSelect" unique_id=910547264]
 layout_mode = 0
-offset_left = 36.0
-offset_right = 68.0
-offset_bottom = 31.000015
+offset_top = -82.5
+offset_right = 32.0
+offset_bottom = -51.499985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -166,11 +167,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "4"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button2/Button2/Button2" unique_id=534813241]
+[node name="Button12" type="Button" parent="LevelSelect" unique_id=534813241]
 layout_mode = 0
 offset_left = 36.5
+offset_top = -82.5
 offset_right = 68.5
-offset_bottom = 31.000015
+offset_bottom = -51.499985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -183,12 +185,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "5"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button2/Button2/Button2/Button2" unique_id=1353313474]
+[node name="Button13" type="Button" parent="LevelSelect" unique_id=1353313474]
 layout_mode = 0
-offset_left = 37.5
-offset_top = 1.0
-offset_right = 69.5
-offset_bottom = 32.000015
+offset_left = 74.0
+offset_top = -81.5
+offset_right = 106.0
+offset_bottom = -50.499985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -201,12 +203,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "6"
 
-[node name="Button3" type="Button" parent="LevelSelect/Button2" unique_id=1395622217]
+[node name="Button4" type="Button" parent="LevelSelect" unique_id=1395622217]
 layout_mode = 0
-offset_left = 0.5
-offset_top = 37.5
-offset_right = 32.5
-offset_bottom = 68.500015
+offset_left = -107.0
+offset_top = -44.5
+offset_right = -75.0
+offset_bottom = -13.499985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -219,12 +221,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "7"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button3" unique_id=1099651013]
+[node name="Button5" type="Button" parent="LevelSelect" unique_id=1099651013]
 layout_mode = 0
-offset_left = 35.5
-offset_top = -0.5
-offset_right = 67.5
-offset_bottom = 30.500015
+offset_left = -71.5
+offset_top = -45.0
+offset_right = -39.5
+offset_bottom = -13.999985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -237,11 +239,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "8"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button3/Button2" unique_id=1459656625]
+[node name="Button6" type="Button" parent="LevelSelect" unique_id=1459656625]
 layout_mode = 0
-offset_left = 36.0
-offset_right = 68.0
-offset_bottom = 31.000015
+offset_left = -35.5
+offset_top = -45.0
+offset_right = -3.5
+offset_bottom = -13.999985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -254,11 +257,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "9"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button3/Button2/Button2" unique_id=765437003]
+[node name="Button7" type="Button" parent="LevelSelect" unique_id=765437003]
 layout_mode = 0
-offset_left = 36.0
-offset_right = 68.0
-offset_bottom = 31.000015
+offset_left = 0.5
+offset_top = -45.0
+offset_right = 32.5
+offset_bottom = -13.999985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -271,11 +275,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "10"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button3/Button2/Button2/Button2" unique_id=993389590]
+[node name="Button8" type="Button" parent="LevelSelect" unique_id=993389590]
 layout_mode = 0
-offset_left = 36.5
-offset_right = 68.5
-offset_bottom = 31.000015
+offset_left = 37.0
+offset_top = -45.0
+offset_right = 69.0
+offset_bottom = -13.999985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -288,12 +293,12 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_q7pjq")
 disabled = true
 text = "11"
 
-[node name="Button2" type="Button" parent="LevelSelect/Button2/Button3/Button2/Button2/Button2/Button2" unique_id=443262640]
+[node name="Button9" type="Button" parent="LevelSelect" unique_id=443262640]
 layout_mode = 0
-offset_left = 37.5
-offset_top = 1.0
-offset_right = 69.5
-offset_bottom = 32.000015
+offset_left = 74.5
+offset_top = -44.0
+offset_right = 106.5
+offset_bottom = -12.999985
 offset_transform_enabled = true
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -358,15 +363,15 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="LevelSelect/Button2" to="." method="OnNewLevelPressed" binds= [1]]
-[connection signal="pressed" from="LevelSelect/Button2/Button2" to="." method="OnNewLevelPressed" binds= [2]]
-[connection signal="pressed" from="LevelSelect/Button2/Button2/Button2" to="." method="OnNewLevelPressed" binds= [3]]
-[connection signal="pressed" from="LevelSelect/Button2/Button2/Button2/Button2" to="." method="OnNewLevelPressed" binds= [4]]
-[connection signal="pressed" from="LevelSelect/Button2/Button2/Button2/Button2/Button2" to="." method="OnNewLevelPressed" binds= [5]]
-[connection signal="pressed" from="LevelSelect/Button2/Button2/Button2/Button2/Button2/Button2" to="." method="OnNewLevelPressed" binds= [6]]
-[connection signal="pressed" from="LevelSelect/Button2/Button3" to="." method="OnNewLevelPressed" binds= [7]]
-[connection signal="pressed" from="LevelSelect/Button2/Button3/Button2" to="." method="OnNewLevelPressed" binds= [8]]
-[connection signal="pressed" from="LevelSelect/Button2/Button3/Button2/Button2" to="." method="OnNewLevelPressed" binds= [9]]
-[connection signal="pressed" from="LevelSelect/Button2/Button3/Button2/Button2/Button2" to="." method="OnNewLevelPressed" binds= [10]]
-[connection signal="pressed" from="LevelSelect/Button2/Button3/Button2/Button2/Button2/Button2" to="." method="OnNewLevelPressed" binds= [11]]
-[connection signal="pressed" from="LevelSelect/Button2/Button3/Button2/Button2/Button2/Button2/Button2" to="." method="OnNewLevelPressed" binds= [12]]
+[connection signal="pressed" from="LevelSelect/Button3" to="." method="OnNewLevelPressed" binds= [2]]
+[connection signal="pressed" from="LevelSelect/Button10" to="." method="OnNewLevelPressed" binds= [3]]
+[connection signal="pressed" from="LevelSelect/Button11" to="." method="OnNewLevelPressed" binds= [4]]
+[connection signal="pressed" from="LevelSelect/Button12" to="." method="OnNewLevelPressed" binds= [5]]
+[connection signal="pressed" from="LevelSelect/Button13" to="." method="OnNewLevelPressed" binds= [6]]
+[connection signal="pressed" from="LevelSelect/Button4" to="." method="OnNewLevelPressed" binds= [7]]
+[connection signal="pressed" from="LevelSelect/Button5" to="." method="OnNewLevelPressed" binds= [8]]
+[connection signal="pressed" from="LevelSelect/Button6" to="." method="OnNewLevelPressed" binds= [9]]
+[connection signal="pressed" from="LevelSelect/Button7" to="." method="OnNewLevelPressed" binds= [10]]
+[connection signal="pressed" from="LevelSelect/Button8" to="." method="OnNewLevelPressed" binds= [11]]
+[connection signal="pressed" from="LevelSelect/Button9" to="." method="OnNewLevelPressed" binds= [12]]
 [connection signal="pressed" from="LevelSelect/Button" to="." method="OnNextLevelPressed"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cc5x8evuvlfqv"]
+
+[ext_resource type="Texture2D" uid="uid://gr6p0mncbyyg" path="res://nutty-business/assets/sprites/lilly_pad.png" id="1_yehg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spi88"]
+size = Vector2(62.222206, 19.692308)
+
+[node name="LillyPad" type="Sprite2D" unique_id=472107049]
+scale = Vector2(0.5625, 0.609375)
+texture = ExtResource("1_yehg1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=317153140]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=119111648]
+position = Vector2(0.8889084, 8.20513)
+shape = SubResource("RectangleShape2D_spi88")
