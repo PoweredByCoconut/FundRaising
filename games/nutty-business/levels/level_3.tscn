@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://3mcnmywxr7q1"]
 
-[ext_resource type="Script" uid="uid://b6jsb8dtsf0b6" path="res://games/nutty-business/scripts/Level.cs" id="1_u4kh1"]
+[ext_resource type="Script" uid="uid://dt1nw2njl2jhw" path="res://games/nutty-business/scripts/Level.cs" id="1_u4kh1"]
 [ext_resource type="PackedScene" uid="uid://dfc1p1ahqi2l1" path="res://games/nutty-business/scenes/background.tscn" id="2_svivd"]
 [ext_resource type="PackedScene" uid="uid://d0df67eraun0t" path="res://games/nutty-business/scenes/chapel_background.tscn" id="3_yafm2"]
 [ext_resource type="Script" uid="uid://bme57sf7ahuk4" path="res://games/nutty-business/scripts/BackgroundParallax.cs" id="4_46211"]
