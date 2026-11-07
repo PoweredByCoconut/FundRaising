@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c7t0nv5y1er02"]
+
+[ext_resource type="FontFile" uid="uid://mpa4ud4pq4ok" path="res://games/block-destroyer/assets/SkylinePixel - Community Pack/TTF/Skyline Pixel.ttf" id="1_1kqdx"]
+
+[node name="Score" type="Label" unique_id=1580166484]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 57.0
+offset_bottom = 22.0
+theme_override_fonts/font = ExtResource("1_1kqdx")
+theme_override_font_sizes/font_size = 33
+text = "Score: 0"
