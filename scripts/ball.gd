@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 400.0
+var SPEED = 200.0
 
 # Whether the ball is launched or not
 var launched = false

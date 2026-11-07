@@ -1,9 +1,43 @@
 extends StaticBody2D
 
-var destructable = false
+@onready var destructable: bool = true
+@onready var blockType: int = get_meta("blocktype", 0)
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+
 signal destroyed(points: int)
 
+func _ready() -> void:
+	match blockType:
+		0: anim.play("red")
+		1: anim.play("green")
+		2: anim.play("blue")
+		3: anim.play("purp")
+		4: anim.play("yellow")
+		5: anim.play("orange")
+		6:
+			print("wood")
+			destructable = false
+		_:
+			print("Unknown block type:", blockType)
+
 func hit() -> void:
-	if destructable:
-		destroyed.emit(100)   # tell everyone it was destroyed and how many points
-		queue_free()
+	if not destructable:
+		return
+
+	# Disable collision so the ball doesn’t hit it again
+	$CollisionShape2D.set_deferred("disabled", true)
+
+	destroyed.emit(100)
+
+	# Play the break animation
+	match blockType:
+		0: anim.play("redbreak")
+		1: anim.play("greenbreak")
+		2: anim.play("bluebreak")
+		3: anim.play("purpbreak")
+		4: anim.play("yellowbreak")
+		5: anim.play("orangebreak")
+
+	# Wait until the animation finishes, then remove the block
+	await anim.animation_finished
+	queue_free()    # then free yourself

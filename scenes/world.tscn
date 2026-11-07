@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://cykeet3jk270h" path="res://scenes/board.tscn" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://dug7s2ewohq8i" path="res://scenes/ball.tscn" id="3_ball"]
 [ext_resource type="PackedScene" uid="uid://c7t0nv5y1er02" path="res://scenes/score_label.tscn" id="4_k0juu"]
-[ext_resource type="PackedScene" uid="uid://cgs678oo0xy11" path="res://scenes/block.tscn" id="5_71j4m"]
 
 [node name="world" type="Node2D" unique_id=841373944]
 script = ExtResource("1_qfnet")
@@ -22,10 +21,10 @@ scale = Vector2(-5.309655, 3.6368842)
 [node name="ball" parent="." unique_id=999999999 instance=ExtResource("3_ball")]
 
 [node name="Score Label" parent="." unique_id=1656524980 instance=ExtResource("4_k0juu")]
-offset_left = 303.0
-offset_top = -293.0
-offset_right = 313.0
-offset_bottom = -270.0
+offset_left = -233.0
+offset_top = -242.0
+offset_right = -172.0
+offset_bottom = -219.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Live Counter" parent="." unique_id=1580166484 instance=ExtResource("4_k0juu")]
@@ -37,6 +36,3 @@ text = "Lives: 3"
 metadata/_edit_use_anchors_ = true
 
 [node name="blocks" type="Node2D" parent="." unique_id=442538597]
-
-[node name="red" parent="." unique_id=1445048385 instance=ExtResource("5_71j4m")]
-position = Vector2(-341.00003, -472)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cykeet3jk270h"]
 
 [ext_resource type="Script" uid="uid://0oima76v6mlg" path="res://scripts/board.gd" id="1_bw3vb"]
+[ext_resource type="Texture2D" uid="uid://pvy4nu64kvc7" path="res://assets/image.jpg" id="2_tx6nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upxrw"]
 size = Vector2(15, 190)
@@ -35,5 +36,11 @@ shape = SubResource("RectangleShape2D_tx6nw")
 position = Vector2(0, -27)
 shape = SubResource("RectangleShape2D_deahs")
 debug_color = Color(0.9916622, 0, 0.2686876, 0.41960785)
+
+[node name="Image" type="Sprite2D" parent="Deathbox" unique_id=579962123]
+z_index = -1
+position = Vector2(-1, -99)
+scale = Vector2(0.09782693, 0.27358943)
+texture = ExtResource("2_tx6nw")
 
 [connection signal="body_entered" from="Deathbox" to="." method="_on_deathbox_body_entered"]
