@@ -1,18 +1,22 @@
 [gd_scene format=3 uid="uid://dgfoykrb1euv0"]
 
 [ext_resource type="Script" uid="uid://ckoknp5vi6ikt" path="res://scripts/paddle.gd" id="1_3xiby"]
+[ext_resource type="Texture2D" uid="uid://4m3yxhoqpewj" path="res://assets/spritesheet-breakout.png" id="2_y7wee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upxrw"]
 size = Vector2(114, 10)
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_deahs"]
-
 [node name="paddle" type="CharacterBody2D" unique_id=547077066]
+motion_mode = 1
 script = ExtResource("1_3xiby")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=417797087]
 shape = SubResource("RectangleShape2D_upxrw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=974179921]
-scale = Vector2(0.2241211, 0.020507814)
-texture = SubResource("NoiseTexture2D_deahs")
+texture_filter = 1
+position = Vector2(-1.0000005, -2.9802322e-08)
+scale = Vector2(1.7419354, 1.1670989)
+texture = ExtResource("2_y7wee")
+region_enabled = true
+region_rect = Rect2(32.314064, 96.9342, 62.56749, 11.065804)

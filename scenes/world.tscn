@@ -38,5 +38,5 @@ metadata/_edit_use_anchors_ = true
 
 [node name="blocks" type="Node2D" parent="." unique_id=442538597]
 
-[node name="block" parent="blocks" unique_id=1445048385 instance=ExtResource("5_71j4m")]
-position = Vector2(-7.6293945e-06, -27.000008)
+[node name="red" parent="." unique_id=1445048385 instance=ExtResource("5_71j4m")]
+position = Vector2(-341.00003, -472)
